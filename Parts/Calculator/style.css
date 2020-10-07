@@ -1,0 +1,81 @@
+
+* {
+    box-sizing: border-box;
+    font-family: Avenir;
+}
+
+body, html{
+    margin:0px;
+    width:100%;
+    height:100%;
+}
+
+#calc-container{
+    padding: 5px;
+    width:100%;
+    height:100%;
+    background-color: black;
+    display:grid;
+    grid-gap: 0px;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 15% 15% 15% 15% 15%
+}
+
+#calc-container div {
+    padding:20px;
+    border: 5px solid black;
+}
+
+#input-container{ 
+    border-radius: 10px;
+    position: relative;
+    background: rgb(30,30,30);
+    grid-column: 1 / span 6;
+    grid-row: 1
+}
+
+#input-container #input-number {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 15vh;
+}
+
+.button{
+    display: flex;
+    position: relative;
+    width:100%;
+    height: 100%;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s;
+}
+.button:active{
+    transform: scale(0.9);
+}
+.button p {
+    margin:0px;
+    padding: 0px;
+    font-size: 6vh;
+    color:white;
+}
+
+.button1{ background-color:rgb(100,100,150) }
+.button1:hover{ background-color:rgb(90,90,140) }
+.button1:active{ background-color:rgb(80,80,120) }
+
+.button2{ background-color: rgb(255,150,0) }
+.button2:hover{ background-color: rgb(245,130,0) }
+.button2:active{ background-color: rgb(230,120,0); }
+
+.button3{ background-color: rgb(130,130,130) }
+.button3:hover{ background-color: rgb(120,120,120) }
+.button3:active{ background-color: rgb(105,105,105) }
+p{
+    margin: 0px;
+    line-height: 100%;
+    color: white; 
+    font-weight: bold;
+}
+
