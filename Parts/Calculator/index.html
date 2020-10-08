@@ -12,8 +12,20 @@
                 <p id = "input-number"></p>
                 <p id = "operation-symbol"></p>
             </div>
-            <div class = "button1 button" onclick="clearInp()">
-                <p> C </p>
+            <div class = "button1 button" onclick="log()">
+                <p> logₓ </p>
+            </div>
+            <div class = "button1 button" onclick="sin()">
+                <p> sin </p>
+            </div>
+            <div class = "button1 button" onclick="cos()">
+                <p> cos </p>
+            </div>
+            <div class = "button1 button" onclick="tan()">
+                <p> tan </p>
+            </div>
+            <div class = "button1 button" onclick="cClear()">
+                <p  id = "clear-button"> C </p>
             </div>
             <div class = "button1 button" onclick="negate()">
                 <p> +/– </p>
@@ -23,6 +35,18 @@
             </div>
             <div class = "button2 button" onclick="div()">
                 <p> ÷ </p>
+            </div>
+            <div class = "button1 button" style="grid-row: 3" onclick="">
+                <p> ln </p>
+            </div>
+            <div class = "button1 button" style="grid-row: 3" onclick="asin()">
+                <p> sin⁻¹ </p>
+            </div>
+            <div class = "button1 button" style="grid-row: 3" onclick="atan()">
+                <p> cos⁻¹ </p>
+            </div>
+            <div class = "button1 button" style="grid-row: 3" onclick="atan()">
+                <p> tan⁻¹ </p>
             </div>
             <div class = "button3 button" style="grid-row: 3" onclick="digit('7')">
                 <p> 7 </p>
@@ -36,6 +60,18 @@
             <div class = "button2 button" style="grid-row: 3" onclick="add()">
                 <p> + </p>
             </div>
+            <div class = "button1 button" style="grid-row: 4" onclick="square()">
+                <p> x² </p>
+            </div>
+            <div class = "button1 button" style="grid-row: 4" onclick="pow()">
+                <p> xʸ </p>
+            </div>
+            <div class = "button1 button" style="grid-row: 4" onclick="sqrt()">
+                <p> √x </p>
+            </div>
+            <div class = "button1 button" style="grid-row: 4" onclick="radical()">
+                <p> ʸ√x </p>
+            </div>
             <div class = "button3 button" style="grid-row: 4" onclick="digit('4')">
                 <p> 4 </p>
             </div>
@@ -48,6 +84,18 @@
             <div class = "button2 button" style="grid-row: 4" onclick="sub()">
                 <p> – </p>
             </div>
+            <div class = "button1 button" style="grid-row: 5" onclick="fac()">
+                <p> x! </p>
+            </div>
+            <div class = "button1 button" style="grid-row: 5" onclick="tenPow()">
+                <p> 10ˣ </p>
+            </div>
+            <div class = "button1 button" style="grid-row: 5" onclick="rnd()">
+                <p> rnd </p>
+            </div>
+            <div class = "button1 button" style="grid-row: 5" onclick="rndx()">
+                <p> rndₓ </p>
+            </div>
             <div class = "button3 button" style="grid-row: 5" onclick="digit('1')">
                 <p> 1 </p>
             </div>
@@ -57,10 +105,23 @@
             <div class = "button3 button" style="grid-row: 5" onclick="digit('3')">
                 <p> 3 </p>
             </div>
-            <div class = "button2 button" style="grid-row: 5" onclick="times()">
+            <div class = "button2 button" style="grid-row: 5" onclick="mul()">
                 <p> × </p>
             </div>
-            <div class = "button3 button" style="grid-row: 6; grid-column: 1 / span 2" onclick="digit('0')">
+            <div class = "button1 button" style="grid-row: 6" onclick="rand()">
+                <p> rand </p>
+            </div>
+            <div class = "button1 button" style="grid-row: 6" onclick="e()">
+                <p> e </p>
+            </div>
+            <div class = "button1 button" style="grid-row: 6" onclick="PI()">
+                <p> π </p>
+            </div>
+            <div class = "button1 button" style="grid-row: 6" onclick="Ans()">
+                <p> ans </p>
+            </div>
+
+            <div class = "button3 button" style="grid-row: 6; grid-column: 5 / span 2" onclick="digit('0')">
                 <p> 0 </p>
             </div>
             <div class = "button3 button" style="grid-row: 6" onclick="decimal()">
