@@ -22,7 +22,7 @@ body, html{
 }
 
 #calc-container div {
-    padding:20px;
+    padding:5px;
     border: 5px solid black;
 }
 
@@ -32,6 +32,7 @@ body, html{
     background: rgb(30,30,30);
     grid-column: 1 / span 6;
     grid-row: 1
+    overflow: scroll;
 }
 
 #input-container #input-number {
@@ -39,6 +40,13 @@ body, html{
     bottom: 20px;
     right: 20px;
     font-size: 15vh;
+}
+
+
+#operation-symbol{
+    margin-left: 1vh;
+    font-size: 5vh;
+    color: grey;
 }
 
 .button{
