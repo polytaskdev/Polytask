@@ -1,5 +1,7 @@
 var inp1 = "";
-var inp2 = ""; 
+var inp2 = "";
+var inp3 = "";
+var inp4 = "";
 var ans = "";
 var isInp1 = true;
 var operation = "";
@@ -142,5 +144,4 @@ function display(input) {
 function setOperation(input) {
     document.getElementById("operation-symbol").innerHTML = input;
 }
-
 
