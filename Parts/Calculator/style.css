@@ -32,14 +32,14 @@ body, html{
     background: rgb(30,30,30);
     grid-column: 1 / span 6;
     grid-row: 1
-    overflow: scroll;
+    overflow: hidden;
 }
 
-#input-container #input-number {
+#input-number {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
-    font-size: 15vh;
+    bottom: min(5%,20px);
+    right: min(5%,20px);
+    font-size: 12vmin;
 }
 
 

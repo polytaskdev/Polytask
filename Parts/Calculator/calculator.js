@@ -72,7 +72,7 @@ function times() {
 
 let _inp1,_inp2 = 0;
 function calculate() {
-    if(inp1 != "" && inp2 != "")
+    if(inp1 != "" && inp2 != ""){
         switch(operation){
             case "+":
                 _inp1 = Number(inp1);
@@ -100,10 +100,11 @@ function calculate() {
                 showAns(ans)
                 break;
         }
+    }
 }
 
 function showAns(answer) {
-    inp1 = ans.toString();
+    inp1 = (Math.round(ans*1000000000)/1000000000).toString();
     display(inp1);
     inp2 = "";
     isInp1 = true;
@@ -124,12 +125,15 @@ function negate(){
 function percent(){
     if(isInp1){
         inp1/=100;
+        inp1 = Math.round(inp1*1000000000)/1000000000
         display(inp1);
     }else{
         inp2/=100;
+        inp2 = Math.round(inp2*1000000000)/1000000000
         display(inp2);
     }
 }
+
 
 function display(input) {
     document.getElementById("input-number").innerHTML = input;
@@ -138,3 +142,5 @@ function display(input) {
 function setOperation(input) {
     document.getElementById("operation-symbol").innerHTML = input;
 }
+
+
