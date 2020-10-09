@@ -18,37 +18,10 @@ snake[0] ={
     y: (size/2)
 }
 
-//drawing function
-function draw(){
-    //drawing the gray square
-    ctx.fillStyle = "#828282";
-    ctx.fillRect(20, 20, canvas.height-40, canvas.width-40);
-    //drawing the snake and tail
-    ctx.fillStyle = "#4dff36";
-    ctx.fillRect(snake[0].x, snake[0].y, scale, scale);
-    //move snake head
-    let snakeX = snake[0].x;
-    let snakeY = snake[0].y;
-    
-    if(dir == "LEFT")
-        snake[0] -= scale;
-
-    if(dir == "RIGHT")
-        snake[0] += scale;
-
-    if(dir == "UP")
-        snake[0] -= scale;
-
-    if(dir == "DOWN")
-        snake[0] += scale;
-
-
-
-} 
-
 let dir; document.addEventListener("keydown", direction); 
 //Seting the direction being pressed by arrow keys
-function direction(event){
+function direction(event)
+{
     if(event.keyCode == 37)
         dir = "LEFT";
     if(event.keyCode == 38)
@@ -59,6 +32,39 @@ function direction(event){
         dir = "DOWN";    
 
 }
+
+//drawing function
+function draw(){
+    //drawing the gray square
+    ctx.fillStyle = "#828282";
+    ctx.fillRect(20, 20, canvas.height-40, canvas.width-40);
+    //drawing the snake and tail
+    for(let i = 0; i < snake.length; i++)
+    {
+        ctx.fillStyle = "#4dff36";
+        ctx.fillRect(snake[i].x, snake[i].y, scale, scale);
+    }
+    //move snake head
+    let snakeX = snake[0].x;
+    let snakeY = snake[0].y;
+    
+    if(dir == "LEFT")
+        snake[0].x -= scale;
+
+    if(dir == "RIGHT")
+        snake[0].x += scale;
+
+    if(dir == "UP")
+        snake[0].y -= scale;
+
+    if(dir == "DOWN")
+        snake[0].y += scale;
+
+
+
+} 
+
+
 
 
 let game = setInterval(draw, 100);
