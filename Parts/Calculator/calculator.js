@@ -3,6 +3,7 @@ var inp2 = "";
 var ans = "";
 var isInp1 = true;
 var operation = "";
+var history = []
 
 function digit(input) {
     document.getElementById("clear-button").innerHTML = "C"
@@ -184,6 +185,10 @@ function calculate() {
                 ans = Math.round(inp1*(Math.pow(10,inp2)))/Math.pow(10,inp2);
                 showAns(ans)
                 break;
+        }
+        history.append(ans)
+        if(history.length() >= 10){
+            history.pop()
         }
     }
 }
@@ -407,11 +412,11 @@ function PI(){
 
 function Ans(){
     if(isInp1){
-        inp1=ans;
+        inp1=history[0];
         inp1 = Math.round(inp1*1000000000)/1000000000;
         display(inp1);
     }else{
-        inp2=ans;
+        inp2=history[0];
         inp2 = Math.round(inp1*1000000000)/1000000000
         display(inp2);
     }
