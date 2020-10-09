@@ -1,14 +1,12 @@
 var inp1 = "";
 var inp2 = "";
-var inp3 = "";
-var inp4 = "";
 var ans = "";
 var isInp1 = true;
 var operation = "";
 
 function digit(input) {
     document.getElementById("clear-button").innerHTML = "C"
-    if(isInp1){ 
+    if(isInp1){
         inp1 += input;
         display(inp1);
     }else{
@@ -18,7 +16,7 @@ function digit(input) {
 }
 
 function decimal(){
-    if(isInp1){ 
+    if(isInp1){
         if(!inp1.includes('.')){
             inp1 += "."
         }
@@ -195,7 +193,7 @@ function showAns(answer) {
     display(inp1);
     inp2 = "";
     isInp1 = true;
-    setOperation("");   
+    setOperation("");
     operation = ""
 }
 
@@ -342,9 +340,9 @@ function fac(){
 }
 
 function factorial(num) {
-  if (num < 0) 
+  if (num < 0)
         return -1;
-  else if (num == 0) 
+  else if (num == 0)
       return 1;
   else {
       return (num * factorial(num - 1));
@@ -428,4 +426,3 @@ function setOperation(input) {
 
     document.getElementById("operation-symbol").innerHTML = input;
 }
-
