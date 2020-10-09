@@ -17,7 +17,7 @@ body, html{
     background-color: black;
     display:grid;
     grid-gap: 0px;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
     grid-template-rows: 25% 15% 15% 15% 15% 15%
 }
 
@@ -29,17 +29,17 @@ body, html{
 #input-container{ 
     border-radius: 10px;
     position: relative;
-    background: rgb(30,30,30);
-    grid-column: 1 / span 6;
+    background: rgb(40,40,50);
+    grid-column: 1 / span 8;
     grid-row: 1
-    overflow: scroll;
+    overflow: hidden;
 }
 
-#input-container #input-number {
+#input-number {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
-    font-size: 15vh;
+    bottom: min(5%,20px);
+    right: min(5%,20px);
+    font-size: 10vmin;
 }
 
 
@@ -65,7 +65,7 @@ body, html{
 .button p {
     margin:0px;
     padding: 0px;
-    font-size: 6vh;
+    font-size: 4.5vmin;
     color:white;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
