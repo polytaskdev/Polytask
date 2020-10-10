@@ -26,10 +26,10 @@ body, html{
     border: 5px solid black;
 }
 
-#input-container{ 
+#input-container{
     border-radius: 10px;
     position: relative;
-    background: rgb(40,40,50);
+    background: rgb(25,28,35);
     grid-column: 1 / span 8;
     grid-row: 1
     overflow: hidden;
@@ -89,7 +89,6 @@ body, html{
 p{
     margin: 0px;
     line-height: 100%;
-    color: white; 
+    color: white;
     font-weight: bold;
 }
-
