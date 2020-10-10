@@ -1,14 +1,13 @@
 var inp1 = "";
 var inp2 = "";
-var inp3 = "";
-var inp4 = "";
 var ans = "";
 var isInp1 = true;
 var operation = "";
+var history = []
 
 function digit(input) {
     document.getElementById("clear-button").innerHTML = "C"
-    if(isInp1){ 
+    if(isInp1){
         inp1 += input;
         display(inp1);
     }else{
@@ -18,7 +17,7 @@ function digit(input) {
 }
 
 function decimal(){
-    if(isInp1){ 
+    if(isInp1){
         if(!inp1.includes('.')){
             inp1 += "."
         }
@@ -187,6 +186,10 @@ function calculate() {
                 showAns(ans)
                 break;
         }
+        history.append(ans)
+        if(history.length() >= 10){
+            history.pop()
+        }
     }
 }
 
@@ -195,7 +198,7 @@ function showAns(answer) {
     display(inp1);
     inp2 = "";
     isInp1 = true;
-    setOperation("");   
+    setOperation("");
     operation = ""
 }
 
@@ -342,9 +345,9 @@ function fac(){
 }
 
 function factorial(num) {
-  if (num < 0) 
+  if (num < 0)
         return -1;
-  else if (num == 0) 
+  else if (num == 0)
       return 1;
   else {
       return (num * factorial(num - 1));
@@ -409,11 +412,11 @@ function PI(){
 
 function Ans(){
     if(isInp1){
-        inp1=ans;
+        inp1=history[0];
         inp1 = Math.round(inp1*1000000000)/1000000000;
         display(inp1);
     }else{
-        inp2=ans;
+        inp2=history[0];
         inp2 = Math.round(inp1*1000000000)/1000000000
         display(inp2);
     }
@@ -428,4 +431,3 @@ function setOperation(input) {
 
     document.getElementById("operation-symbol").innerHTML = input;
 }
-
