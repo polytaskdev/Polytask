@@ -6,7 +6,9 @@ const rows = canvas.height / scale;
 const columns = canvas.width / scale;
 
 const size = 580;
+const bsize = 29;
 
+var score;
 
 console.log("There are " + rows + " rows");
 console.log("There are " + columns + " columns");
@@ -14,9 +16,24 @@ console.log("There are " + columns + " columns");
 let snake = [];
 
 snake[0] ={
-    x: (size/2),
-    y: (size/2)
+    x:Math.floor((bsize/2)) * scale, 
+    y:Math.floor((bsize/2)) * scale
 }
+
+//choosing the placement of the food
+
+var fx;
+var fy;
+fx = Math.floor(Math.random() * 28) + 1;
+fy = Math.floor(Math.random() * 28) + 1;
+
+
+var food;
+food = {
+    x :(bsize- fx) * scale,
+    y :(bsize- fy) * scale
+}
+
 
 let dir; document.addEventListener("keydown", direction); 
 //Seting the direction being pressed by arrow keys
@@ -44,6 +61,7 @@ function draw(){
         ctx.fillStyle = "#4dff36";
         ctx.fillRect(snake[i].x, snake[i].y, scale, scale);
     }
+
     //move snake head
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
@@ -59,11 +77,31 @@ function draw(){
 
     if(dir == "DOWN")
         snake[0].y += scale;
+ 
+    
+    //Eating the food
+    if(snake[0].x == food.x && snake[0].y == food.y){
+        score +=1;
+        console.log(score)
+        fx = Math.floor(Math.random() * 28) + 1;
+        fy = Math.floor(Math.random() * 28) + 1;
+
+     }
+    //Making the food
+    ctx.fillStyle = "red";
+    ctx.fillRect( food.x, food.y, scale, scale);
+
+  
+
+    
+
+                   
 
 
+    }
 
-} 
 
+ 
 
 
 
