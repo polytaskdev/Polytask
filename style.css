@@ -1,0 +1,21 @@
+html,body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Avenir;
+}
+
+#header{
+    background-color: rgb(140,155,255);
+    padding: 5px;
+}
+
+#header-title-container{
+    padding-left: 10px;
+    margin: 0px;
+}
+
+#header-title-container h2{
+    margin: 0px;
+    color: white;
+    font-weight: 500;
+}
