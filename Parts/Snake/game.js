@@ -13,12 +13,12 @@ console.log("There are " + columns + " columns");
 let snake = [];
 
 snake[0] ={
-    x:Math.floor((bsize/2)) * scale, 
+    x:Math.floor((bsize/2)) * scale,
     y:Math.floor((bsize/2)) * scale
 };
 
 
-let dir; document.addEventListener("keydown", direction); 
+let dir; document.addEventListener("keydown", direction);
 
 //Seting the direction being pressed by arrow keys
 function direction(event)
@@ -26,11 +26,11 @@ function direction(event)
     if(event.keyCode == 37)
         dir = "LEFT";
     if(event.keyCode == 38)
-        dir = "UP";    
+        dir = "UP";
     if(event.keyCode == 39)
-        dir = "RIGHT";    
+        dir = "RIGHT";
     if(event.keyCode == 40)
-        dir = "DOWN";    
+        dir = "DOWN";
 
 }
 //choosing the placement of the food
@@ -65,7 +65,7 @@ function draw(){
     //move snake head
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
-    
+
     if(dir == "LEFT")
         snakeX -= scale;
 
@@ -77,35 +77,35 @@ function draw(){
 
     if(dir == "DOWN")
         snakeY += scale;
- 
+
      //Eating the food
     if(snakeX == food.x && snakeY == food.y){
-        
+
         fx = Math.floor(Math.random() * 28) + 1;
         fy = Math.floor(Math.random() * 28) + 1;
         food.x = (bsize-fx)*scale;
         food.y = (bsize-fy)*scale;
         score +=1;
         console.log(score);
-   
+
     }
     else {
         snake.pop();
-    }   
+    }
 
-        let newHead = {
+    let newHead = {
         x : snakeX,
         y : snakeY
-        };
-    
+    };
+
        //Collision detection
     function collision(head, array){
         for(let i = 0; i<array; i++){
           if(head.x == array[i].x && head.y == array[i].y ){
             return true;
-          };  
+          };
         };
-     };
+
         return false;
 
         if(snakeX < scale || snakeY < scale ||
@@ -114,15 +114,13 @@ function draw(){
         {
             clearInterval(game);
         };
+    };
 
     snake.unshift(newHead);
-
     //Making the food
     ctx.fillStyle = "red";
     ctx.fillRect( food.x, food.y, scale, scale);
 }
-    
+
 
 let game = setInterval(draw, 100);
-
-
