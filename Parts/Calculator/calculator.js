@@ -102,7 +102,7 @@ function log() {
 
 function getBaseLog(x, y) {
 
-  return Math.log(y) / Math.log(x);
+    return Math.log(y) / Math.log(x);
 }
 
 function pow() {
@@ -137,54 +137,54 @@ function calculate() {
     if(inp1 != "" && inp2 != ""){
         switch(operation){
             case "+":
-                _inp1 = Number(inp1);
-                _inp2 = Number(inp2);
-                ans = _inp1 + _inp2;
-                showAns(ans)
-                break;
+            _inp1 = Number(inp1);
+            _inp2 = Number(inp2);
+            ans = _inp1 + _inp2;
+            showAns(ans)
+            break;
 
             case "–":
-                _inp1 = Number(inp1);
-                _inp2 = Number(inp2);
-                ans = _inp1 - _inp2;
-                showAns(ans)
-                break;
+            _inp1 = Number(inp1);
+            _inp2 = Number(inp2);
+            ans = _inp1 - _inp2;
+            showAns(ans)
+            break;
             case "÷":
-                _inp1 = Number(inp1);
-                _inp2 = Number(inp2);
-                ans = _inp1/_inp2;
-                showAns(ans)
-                break;
+            _inp1 = Number(inp1);
+            _inp2 = Number(inp2);
+            ans = _inp1/_inp2;
+            showAns(ans)
+            break;
             case "×":
-                _inp1 = Number(inp1);
-                _inp2 = Number(inp2);
-                ans = _inp1*_inp2;
-                showAns(ans)
-                break;
+            _inp1 = Number(inp1);
+            _inp2 = Number(inp2);
+            ans = _inp1*_inp2;
+            showAns(ans)
+            break;
             case "log":
-                _inp1 = Number(inp1);
-                _inp2 = Number(inp2);
-                ans = getBaseLog(_inp1,_inp2);
-                showAns(ans)
-                break;
+            _inp1 = Number(inp1);
+            _inp2 = Number(inp2);
+            ans = getBaseLog(_inp1,_inp2);
+            showAns(ans)
+            break;
             case "pow":
-                _inp1 = Number(inp1);
-                _inp2 = Number(inp2);
-                ans = Math.pow(_inp1,_inp2);
-                showAns(ans)
-                break;
+            _inp1 = Number(inp1);
+            _inp2 = Number(inp2);
+            ans = Math.pow(_inp1,_inp2);
+            showAns(ans)
+            break;
             case "radical":
-                _inp1 = Number(inp1);
-                _inp2 = Number(inp2);
-                ans = Math.pow(_inp1,1/_inp2);
-                showAns(ans)
-                break;
+            _inp1 = Number(inp1);
+            _inp2 = Number(inp2);
+            ans = Math.pow(_inp1,1/_inp2);
+            showAns(ans)
+            break;
             case "rndx":
-                _inp1 = Number(inp1);
-                _inp2 = Number(inp2);
-                ans = Math.round(inp1*(Math.pow(10,inp2)))/Math.pow(10,inp2);
-                showAns(ans)
-                break;
+            _inp1 = Number(inp1);
+            _inp2 = Number(inp2);
+            ans = Math.round(inp1*(Math.pow(10,inp2)))/Math.pow(10,inp2);
+            showAns(ans)
+            break;
         }
         history.append(ans)
         if(history.length() >= 10){
@@ -345,13 +345,13 @@ function fac(){
 }
 
 function factorial(num) {
-  if (num < 0)
-        return -1;
-  else if (num == 0)
-      return 1;
-  else {
-      return (num * factorial(num - 1));
-  }
+    if (num < 0)
+    return -1;
+    else if (num == 0)
+    return 1;
+    else {
+        return (num * factorial(num - 1));
+    }
 }
 
 function tenPow(){
