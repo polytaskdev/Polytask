@@ -6,12 +6,13 @@
   --text: black;
   --text-secondary: rgb(30,30,30);
   --shadow: rgb(0,0,0,0.03);
+  --shadow-dark: rgb(0,0,0,0.2);
 }
 
 html,body{
     margin: 0px;
     padding: 0px;
-    font-family: Avenir;
+    font-family: Roboto, sans-serif;
     background-color: var(--primary);
     color: var(--text);
 }
@@ -31,6 +32,13 @@ p{
     backdrop-filter: blur(15px);
     border-bottom: 1px solid var(--header-secondary);
     box-shadow: 0px 8px 15px var(--shadow);
+    z-index: 10000;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 #header-title-container{
@@ -42,12 +50,13 @@ p{
 }
 
 #header-title-container h2{
-    margin: 0px;
-    font-size: 20px;
+    margin: 2px;
+    font-size: 22px;
     font-weight: lighter;
 }
 
 #main-container{
+    position: relative;
     box-sizing: border-box;
     margin-top: 60px;
     width:100%;
@@ -57,13 +66,26 @@ p{
 
 .part-container{
     position: absolute;
+    top:0px;
+    left: 5px;
     border-radius: 8px 8px 8px 8px;
     overflow: hidden;
     box-shadow: 5px 5px 15px var(--shadow);
     padding: 5px;
     resize: both;
     margin: 10px;
-    height: 90%;
+    height: 100%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.hidden{
+    display: none;
 }
 
 .drag-bar{
@@ -73,6 +95,7 @@ p{
 
 .drag-bar p {
     text-align: center;
+    font-weight: lighter;
 }
 
 .calculator{
