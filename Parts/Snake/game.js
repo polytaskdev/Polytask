@@ -10,6 +10,7 @@ var score = 0;
 console.log("There are " + rows + " rows");
 console.log("There are " + columns + " columns");
 
+
 let snake = [];
 
 snake[0] ={
@@ -52,14 +53,16 @@ food = {
 
 //drawing function
 function draw(){
+    ctx.fillStyle = "#7B9C3D";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
     //drawing the gray square
-    ctx.fillStyle = "#828282";
-    ctx.fillRect(20, 20, canvas.height-40, canvas.width-40);
+    ctx.fillStyle = "#9EB565";
+    roundRect(ctx,20, 20, canvas.height-40, canvas.width-40,5,true,false);
     //drawing the snake and tail
     for(let i = 0; i < snake.length; i++)
     {
-        ctx.fillStyle = "#4dff36";
-        ctx.fillRect(snake[i].x, snake[i].y, scale, scale);
+        ctx.fillStyle = "#EDD691";
+        roundRect(ctx,snake[i].x, snake[i].y, scale, scale,5,true,false);
     }
 
     //move snake head
@@ -114,22 +117,62 @@ function draw(){
         {
             clearInterval(game);
         };
-    
+
 
     snake.unshift(newHead);
     //Making the food
-    ctx.fillStyle = "red";
-    ctx.fillRect( food.x, food.y, scale, scale);
+    ctx.fillStyle = "#DF4A1B";
+    roundRect(ctx, food.x, food.y, scale, scale,5,true,false);
 
     //Score
-    
+
     ctx.fillStyle = "white";
-    ctx.font = "24px Avenir";
-    ctx.clearRect(0, 0, 50, 25);
-    ctx.fillText(score, scale, 0.8 * scale);
-   
-    
+    ctx.font = "18px Avenir";
+    ctx.fillText("score: "+score, scale, 0.8 * scale);
+
+
 }
 
 
 let game = setInterval(draw, 100);
+
+
+
+
+
+
+//function for rounded rects(stackoverflow)
+function roundRect(ctx, x, y, width, height, radius, fill, stroke) {
+  if (typeof stroke === 'undefined') {
+    stroke = true;
+  }
+  if (typeof radius === 'undefined') {
+    radius = 5;
+  }
+  if (typeof radius === 'number') {
+    radius = {tl: radius, tr: radius, br: radius, bl: radius};
+  } else {
+    var defaultRadius = {tl: 0, tr: 0, br: 0, bl: 0};
+    for (var side in defaultRadius) {
+      radius[side] = radius[side] || defaultRadius[side];
+    }
+  }
+  ctx.beginPath();
+  ctx.moveTo(x + radius.tl, y);
+  ctx.lineTo(x + width - radius.tr, y);
+  ctx.quadraticCurveTo(x + width, y, x + width, y + radius.tr);
+  ctx.lineTo(x + width, y + height - radius.br);
+  ctx.quadraticCurveTo(x + width, y + height, x + width - radius.br, y + height);
+  ctx.lineTo(x + radius.bl, y + height);
+  ctx.quadraticCurveTo(x, y + height, x, y + height - radius.bl);
+  ctx.lineTo(x, y + radius.tl);
+  ctx.quadraticCurveTo(x, y, x + radius.tl, y);
+  ctx.closePath();
+  if (fill) {
+    ctx.fill();
+  }
+  if (stroke) {
+    ctx.stroke();
+  }
+
+}
