@@ -23,13 +23,13 @@ let dir; document.addEventListener("keydown", direction);
 //Seting the direction being pressed by arrow keys
 function direction(event)
 {
-    if(event.keyCode == 37)
+    if(event.keyCode == 37 && dir != "RIGHT")
         dir = "LEFT";
-    if(event.keyCode == 38)
+    if(event.keyCode == 38 && dir != "DOWN")
         dir = "UP";
-    if(event.keyCode == 39)
+    if(event.keyCode == 39 && dir != "LEFT")
         dir = "RIGHT";
-    if(event.keyCode == 40)
+    if(event.keyCode == 40 && dir != "UP")
         dir = "DOWN";
 
 }
@@ -107,19 +107,28 @@ function draw(){
         };
 
         return false;
-
-        if(snakeX < scale || snakeY < scale ||
-           snakeX > ((bsize - 1) * scale) || snakeY > ((bsize - 1) * scale) ||
-           collision(newHead, snake))
+        };
+    if(snakeX < scale || snakeY < scale ||
+        snakeX > ((bsize - 1) * scale) || snakeY > ((bsize - 1) * scale) ||
+        collision(newHead, snake))
         {
             clearInterval(game);
         };
-    };
+    
 
     snake.unshift(newHead);
     //Making the food
     ctx.fillStyle = "red";
     ctx.fillRect( food.x, food.y, scale, scale);
+
+    //Score
+    
+    ctx.fillStyle = "white";
+    ctx.font = "24px Avenir";
+    ctx.clearRect(0, 0, 50, 25);
+    ctx.fillText(score, scale, 0.8 * scale);
+   
+    
 }
 
 
