@@ -51,10 +51,22 @@ html,body{
 }
 
 .part-container{
-    border-radius: 8px;
+    border-radius: 8px 8px 8px 8px;
     overflow: hidden;
     box-shadow: 5px 5px 15px var(--shadow);
     margin: 10px;
+    padding: 5px;
+    resize: both;
+}
+
+.drag-bar{
+    
+}
+
+.calculator{
+    background-color: black;
+    width: 600px;
+    height: 400px;
 }
 
 iframe{
