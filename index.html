@@ -5,6 +5,7 @@
     <title>PolyTask</title>
     <link rel="stylesheet" href="style.css">
     <script src = "drag.js"></script>
+    <script src = "window.js"></script>
     <meta charset="utf-8">
 </head>
 
@@ -20,12 +21,15 @@
             <div class="drag-bar" onmousedown="dragStart(this)">
                 <p>calculator</p>
             </div>
+            <button onclick="closeWindow(this)">×</button>
             <iframe src="Parts/Calculator/index.html"></iframe>
         </div>
+
         <div class="part-container snake">
             <div class="drag-bar" onmousedown="dragStart(this)">
                 <p>snake</p>
             </div>
+            <button onclick="closeWindow(this)">×</button>
             <iframe src="Parts/Snake/index.html"></iframe>
         </div>
     </div>

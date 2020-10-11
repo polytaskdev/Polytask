@@ -16,7 +16,6 @@ function dragStart(element){
 	document.addEventListener("mousemove",drag);
 	draggedElement.parentNode.style.boxShadow = "5px 5px 15px var(--shadow-dark)"
     draggedElement.parentNode.style.transform = "scale(1.01)"
-
 }
 
 function drag(e){
