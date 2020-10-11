@@ -108,6 +108,14 @@ p{
     color: white;
 }
 
+.snake{
+    width: 615px;
+    height: 640px;
+    resize: none;
+    color:white;
+    background-color: #7B9C3D;
+}
+
 iframe{
     width: 100%;
     height: calc(100% - 20px);
