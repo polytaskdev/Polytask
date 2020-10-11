@@ -105,7 +105,8 @@ function draw(){
     function collision(head, array){
         for(let i = 0; i<array; i++){
           if(head.x == array[i].x && head.y == array[i].y ){
-            return true;
+              return true;
+
           };
         };
 
