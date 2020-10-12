@@ -23,7 +23,6 @@ function dragStart(element){
 }
 
 function drag(e){
-	console.log("drag")
 	draggedElement.parentNode.style.left = (e.pageX-xOffset)+"px";
     if(e.pageY>70){
 	    draggedElement.parentNode.style.top = (e.pageY-yOffset)+"px";

@@ -6,33 +6,35 @@
     <link rel="stylesheet" href="style.css">
     <script src = "drag.js"></script>
     <script src = "window.js"></script>
+    <script src = "appearance.js"></script>
     <meta charset="utf-8">
 
 </head>
 
 <body>
     <div id = "header">
-        <div id = "header-title-container">
+        <div id = "header-title-container" class="header-item">
             <h2>PolyTask</h2>
+        </div>
+        <div id = "add-button" class="header-item">
+            <div id = "plus-button">+</div>
+            <div class = "drop-down">
+                <div onclick="addCalculator()">calculator</div>
+                <div onclick="addSnake()">snake</div>
+            </div>
+        </div>
+        <div id = "appearance-toggle" class="header-item">
+            <div id = "darklight-button">◐</div>
+            <div class = "drop-down">
+                <div onclick="auto()">auto</div>
+                <div onclick="lightmode()">light</div>
+                <div onclick="darkmode()">dark</div>
+            </div>
         </div>
     </div>
 
     <div id = "main-container">
-        <div class="part-container calculator">
-            <div class="drag-bar" onmousedown="dragStart(this)">
-                <p>calculator</p>
-            </div>
-            <button onclick="closeWindow(this)">×</button>
-            <iframe src="Parts/Calculator/index.html"></iframe>
-        </div>
 
-        <div class="part-container snake">
-            <div class="drag-bar" onmousedown="dragStart(this)">
-                <p>snake</p>
-            </div>
-            <button onclick="closeWindow(this)">×</button>
-            <iframe src="Parts/Snake/index.html"></iframe>
-        </div>
     </div>
 </body>
 </html>
