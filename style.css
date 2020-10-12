@@ -124,7 +124,6 @@ p{
     margin: 2px;
     font-size: 22px;
     font-weight: lighter;
-    text-shadow: 1px 1px rgb(191, 0, 255);
 }
 
 #main-container{
@@ -157,9 +156,9 @@ p{
 }
 
 #lightmode-button {
-  background-color: white;
-  color: black;
-  transition: all 0.2s;
+    background-color: white;
+    color: black;
+    transition: all 0.2s;
 }
 
 #lightmode-button:hover {
@@ -167,8 +166,8 @@ p{
 }
 
 #automode-button {
-  background-color: rgb(120,125,130);
-  color: white;
+    background-color: rgb(120,125,130);
+    color: white;
 }
 
 #automode-button:hover {
