@@ -6,6 +6,7 @@ const columns = canvas.width / scale;
 const size = 580;
 const bsize = 29;
 var score = 0;
+var restart = false;
 
 console.log("There are " + rows + " rows");
 console.log("There are " + columns + " columns");
@@ -118,6 +119,7 @@ function draw(){
         collision(newHead, snake))
         {
             clearInterval(game);
+            window.location.reload();
         };
 
 
@@ -178,3 +180,5 @@ function roundRect(ctx, x, y, width, height, radius, fill, stroke) {
   }
 
 }
+
+
