@@ -3,7 +3,6 @@ var inp2 = "";
 var ans = "";
 var isInp1 = true;
 var operation = "";
-var history = []
 
 function digit(input) {
     document.getElementById("clear-button").innerHTML = "C"
@@ -185,10 +184,6 @@ function calculate() {
             ans = Math.round(inp1*(Math.pow(10,inp2)))/Math.pow(10,inp2);
             showAns(ans)
             break;
-        }
-        history.append(ans)
-        if(history.length() >= 10){
-            history.pop()
         }
     }
 }
