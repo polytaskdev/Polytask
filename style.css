@@ -66,6 +66,7 @@ p{
     border-radius: 10px;
     border: 1px solid var(--header-secondary);
     box-shadow: 0px 0px 5px var(--shadow);
+
 }
 
 .drop-down div{
@@ -123,6 +124,7 @@ p{
     margin: 2px;
     font-size: 22px;
     font-weight: lighter;
+    text-shadow: 1px 1px rgb(191, 0, 255);
 }
 
 #main-container{
@@ -152,6 +154,17 @@ p{
     -ms-user-select: none;
     user-select: none;
     transition: box-shadow 0.2s, transform 0.2s;
+}
+
+#lightmode-button {
+  background-color: white;
+  color: black;
+}
+
+#automode-button {
+  background-color: rgb(120,125,130);
+
+
 }
 
 .drag-bar{
