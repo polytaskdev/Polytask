@@ -16,10 +16,15 @@ function dragStart(element){
 	document.addEventListener("mousemove",drag);
 	draggedElement.parentNode.style.boxShadow = "5px 5px 15px var(--shadow-dark)"
     draggedElement.parentNode.style.transform = "scale(1.01)"
+	elements = document.getElementsByTagName("iframe")
+	for(element in elements){
+		elements[element].classList.add("no-pointer");
+	}
 }
 
 function drag(e){
-	    draggedElement.parentNode.style.left = (e.pageX-xOffset)+"px";
+	console.log("drag")
+	draggedElement.parentNode.style.left = (e.pageX-xOffset)+"px";
     if(e.pageY>70){
 	    draggedElement.parentNode.style.top = (e.pageY-yOffset)+"px";
     }
@@ -30,4 +35,8 @@ function endDrag(e){
 	document.removeEventListener("mousemove",drag);
 	draggedElement.parentNode.style.boxShadow = "5px 5px 15px var(--shadow)"
     draggedElement.parentNode.style.transform = "scale(1)"
+	elements = document.getElementsByTagName("iframe")
+	for(element in elements){
+		elements[element].classList.remove("no-pointer");
+	}
 }

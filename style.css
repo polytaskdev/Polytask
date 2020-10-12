@@ -75,10 +75,6 @@ p{
     transition: box-shadow 0.2s, transform 0.2s;
 }
 
-.hidden{
-    display: none;
-}
-
 .drag-bar{
     width: 100%;
     height: 20px;
@@ -130,11 +126,14 @@ p{
     background-color: #7B9C3D;
 }
 
-
 iframe{
     width: 100%;
     height: calc(100% - 20px);
     border: none;
+}
+
+.no-pointer{
+    pointer-events: none;
 }
 
 
