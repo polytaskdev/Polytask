@@ -242,23 +242,11 @@ p{
 .dictionary{
     width: 400px;
     height: 600px;
-    border: 2px solid var(--header-secondary)
+    background-color: rgb(80,120,180);
+    color:white;
+    border: 5px solid rgb(60,100,150);
 }
 
-.dictionary:hover button{
-    background-color: rgb(0,0,0,0);
-    color:var(--text-secondary);
-}
-
-.dictionary button:hover{
-    background-color: rgb(0,0,0,0.2);
-    color:var(--text);
-}
-
-.dictionary button:active{
-    background-color: rgb(0,0,0,0.6);
-    color:var(--text);
-}
 
 
 iframe{
