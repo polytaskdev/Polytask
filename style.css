@@ -199,11 +199,16 @@ p{
     right: 5px;
     width:20px;
     height:20px;
-    background-color: rgb(0,0,0,0.05);
-    color:rgb(255,255,255,0.4);
+    background-color: rgb(0,0,0,0);
+    color:rgb(255,255,255,0);
     border: none;
     border-radius: 20%;
     transition: all 0.2s;
+}
+
+.part-container:hover button{
+    background-color: rgb(0,0,0,0.05);
+    color:rgb(255,255,255,0.4);
 }
 
 .part-container button:hover{
