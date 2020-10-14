@@ -239,6 +239,28 @@ p{
     background-color: #7B9C3D;
 }
 
+.dictionary{
+    width: 400px;
+    height: 600px;
+    border: 2px solid var(--header-secondary)
+}
+
+.dictionary:hover button{
+    background-color: rgb(0,0,0,0);
+    color:var(--text-secondary);
+}
+
+.dictionary button:hover{
+    background-color: rgb(0,0,0,0.2);
+    color:var(--text);
+}
+
+.dictionary button:active{
+    background-color: rgb(0,0,0,0.6);
+    color:var(--text);
+}
+
+
 iframe{
     width: 100%;
     height: calc(100% - 20px);

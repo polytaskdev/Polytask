@@ -14,6 +14,12 @@ var addSnake = () => {
     container.innerHTML += snake;
 }
 
+var addDictionary = () => {
+    container = document.getElementById('main-container');
+    dictionary = `<div class="part-container dictionary" onclick = "goTop(this)"><div class="drag-bar" onmousedown="dragStart(this)"><p>dictionary</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/Dictionary/index.html"></iframe></div>`
+    container.innerHTML += dictionary;
+}
+
 //deletes window
 var closeWindow = (element) => {
     console.log("hello")
