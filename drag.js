@@ -12,13 +12,13 @@ function dragStart(element){
     }
 	xOffset = event.pageX-parseInt(draggedElement.parentNode.style.left);
 	yOffset = event.pageY-parseInt(draggedElement.parentNode.style.top);
-    console.log(draggedElement.parentNode.style)
 	document.addEventListener("mousemove",drag);
+	document.addEventListener("mouseup",endDrag);
 	draggedElement.parentNode.style.boxShadow = "5px 5px 15px var(--shadow-dark)"
     draggedElement.parentNode.style.transform = "scale(1.01)"
 	elements = document.getElementsByTagName("iframe")
-	for(element in elements){
-		elements[element].classList.add("no-pointer");
+	for(let i = 0; i < elements.length; i++){
+		elements[i].classList.add("no-pointer");
 	}
 }
 
@@ -29,13 +29,13 @@ function drag(e){
     }
 }
 
-document.addEventListener("mouseup",endDrag)
+//document.addEventListener("mouseup",endDrag)
 function endDrag(e){
 	document.removeEventListener("mousemove",drag);
 	draggedElement.parentNode.style.boxShadow = "5px 5px 15px var(--shadow)"
     draggedElement.parentNode.style.transform = "scale(1)"
 	elements = document.getElementsByTagName("iframe")
-	for(element in elements){
-		elements[element].classList.remove("no-pointer");
+	for(let i = 0; i < elements.length; i++){
+		elements[i].classList.remove("no-pointer");
 	}
 }

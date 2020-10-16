@@ -186,6 +186,11 @@ p{
 .drag-bar{
     width: 100%;
     height: 20px;
+    cursor: grab;
+}
+
+.drag-bar:active{
+    cursor: grabbing;
 }
 
 .drag-bar p {
