@@ -242,6 +242,7 @@ p{
     resize: none;
     color:white;
     background-color: #7B9C3D;
+    border: 5px solid rgb(120,150,80);
 }
 
 .dictionary{
@@ -252,6 +253,13 @@ p{
     border: 5px solid rgb(60,100,150);
 }
 
+.note{
+    width: 200px;
+    height: 300px;
+    background-color: #e6ca55;
+    color: black;
+    border: 5px solid #d6ba35;
+}
 
 
 iframe{
