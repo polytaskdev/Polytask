@@ -83,8 +83,24 @@ function saveWindows(){
 
 }
 
-window.addEventListener('beforeUnload',() => {saveWindows()})
-window.addEventListener('unload',() => {saveWindows()})
+//saves dark/light mode
+function saveTheme(){
+    switch (appearance) {
+        case 'auto':
+            localStorage.setItem('theme','auto');
+            break;
+        default:
+        case 'dark':
+            localStorage.setItem('theme','dark');
+            break;
+        case 'light':
+            localStorage.setItem('theme','light');
+            break;
+    }
+}
+
+window.addEventListener('beforeUnload',() => {saveWindows();saveTheme()})
+window.addEventListener('unload',() => {saveWindows();saveTheme()})
 
 //loads in the saved windows
 function loadWindows(){
@@ -110,4 +126,18 @@ function loadWindows(){
     }
 }
 
-window.addEventListener('load',loadWindows);
+//loads the theme
+function loadTheme(){
+    let savedAppearance = localStorage.getItem('theme');
+    switch (savedAppearance) {
+        case 'auto':
+            auto()
+            break;
+        case 'light':
+            lightmode()
+            break;
+        case 'dark':
+            darkmode()
+    }
+}
+window.addEventListener('load',() => {loadWindows();loadTheme()});
