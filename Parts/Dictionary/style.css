@@ -17,6 +17,10 @@ p{
     margin: 4px;
 }
 
+::placeholder{
+    color: rgba(255,255,255,0.4);
+}
+
 #search{
     width: calc(100% - 10px);
     font-size: 25px;
