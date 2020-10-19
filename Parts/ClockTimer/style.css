@@ -1,0 +1,39 @@
+body {
+    font-family: Roboto, sans-serif;
+    background-color: rgb(255, 133, 51);
+}
+    
+
+.tabs {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.tabs button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+
+.tabs button:hover {
+  background-color: #ddd;
+}
+
+
+.tabs button.active {
+  background-color: #ccc;
+}
+
+.tabContent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+  text-align: center;
+}
