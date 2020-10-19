@@ -27,7 +27,7 @@ body {
 }
 
 
-.tabs button.active {
+.tabs button.opened {
   background-color: #ccc;
 }
 
