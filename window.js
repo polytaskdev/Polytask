@@ -17,7 +17,7 @@ var addCalculator = () => {
     container.appendChild(calculator);
 }
 
-//creates a new snake windowss
+//creates a new snake windows
 var addSnake = () => {
     container = document.getElementById('main-container');
     snake = create(`<div class="part-container snake" onmousedown = "goTop(this)" style="z-index:${returnTop()}"><div class="drag-bar" onmousedown="dragStart(this)"><p>snake</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/Snake/index.html"></iframe></div>`)
