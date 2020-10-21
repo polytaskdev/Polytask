@@ -1,7 +1,16 @@
-html {
+html,body{
   background-color: #e6ca55;
-   font-size: 14px;
+  font-size: 14px;
   font-family: 'Roboto', sans-serif;
+  padding: 0;
 }
 
+h3{
+    border-bottom: 1px solid rgb(0,0,0,0.2);
+    padding-bottom: 5px;
+}
 
+p,h3{
+    padding: 0px;
+    outline:none;
+}
