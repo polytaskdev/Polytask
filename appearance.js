@@ -1,3 +1,5 @@
+//changes the theme of the website
+//changes the variables that need to be changed
 var appearance = 'auto'
 function darkmode(){
     document.documentElement.style.cssText = "--primary: rgb(20,23,30);--secondary: rgb(30,35,40);--header: rgb(20,23,30,0.75);--header-secondary: rgb(30,35,40,0.4);--text: rgb(230,230,230);--text-secondary: rgb(210,210,210);--shadow: rgb(0,0,0,0.1);--shadow-dark: rgb(0,0,0,0.5);"

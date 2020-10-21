@@ -1,4 +1,5 @@
-//create js element with an html stringify
+//create js element node thing with an html string
+
 function create(htmlStr) {
     var frag = document.createDocumentFragment(),
         temp = document.createElement('div');
@@ -13,26 +14,26 @@ function create(htmlStr) {
 //creates a new calculator window
 var addCalculator = () => {
     container = document.getElementById('main-container');
-    calculator = create(`<div class="part-container calculator" onmousedown = "goTop(this)" style="z-index:${returnTop()}"><div class="drag-bar" onmousedown="dragStart(this)"><p>calculator</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/Calculator/index.html"></iframe></div>`)
+    calculator = create(`<div class="part-container calculator" onmousedown = "goTop(this)" style="z-index:${returnTop()}"><div class="drag-bar" onmousedown="dragStart(this)"><p>Calculator</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/Calculator/index.html"></iframe></div>`);
     container.appendChild(calculator);
 }
 
 //creates a new snake windows
 var addSnake = () => {
     container = document.getElementById('main-container');
-    snake = create(`<div class="part-container snake" onmousedown = "goTop(this)" style="z-index:${returnTop()}"><div class="drag-bar" onmousedown="dragStart(this)"><p>snake</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/Snake/index.html"></iframe></div>`)
+    snake = create(`<div class="part-container snake" onmousedown = "goTop(this)" style="z-index:${returnTop()}"><div class="drag-bar" onmousedown="dragStart(this)"><p>Snake</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/Snake/index.html"></iframe></div>`);
     container.appendChild(snake);
 }
 
 var addDictionary = () => {
     container = document.getElementById('main-container');
-    dictionary = create(`<div class="part-container dictionary" onmousedown = "goTop(this)" style="z-index:${returnTop()}"><div class="drag-bar" onmousedown="dragStart(this)"><p>dictionary</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/Dictionary/index.html"></iframe></div>`)
+    dictionary = create(`<div class="part-container dictionary" onmousedown = "goTop(this)" style="z-index:${returnTop()}"><div class="drag-bar" onmousedown="dragStart(this)"><p>Dictionary</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/Dictionary/index.html"></iframe></div>`);
     container.appendChild(dictionary);
 }
 
 var addNote = () => {
     container = document.getElementById('main-container');
-    note = create(`<div class="part-container note" onmousedown = "goTop(this)" style="z-index:${returnTop()}"><div class="drag-bar" onmousedown="dragStart(this)"><p>notes</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/Notes/index.html"></iframe></div>`)
+    note = create(`<div class="part-container note" onmousedown = "goTop(this)" style="z-index:${returnTop()}"><div class="drag-bar" onmousedown="dragStart(this)"><p>Nsotes</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/Notes/index.html"></iframe></div>`);
     container.appendChild(note);
 }
 
@@ -45,35 +46,39 @@ var closeWindow = (element) => {
 
 //makes window go to top when clicked
 var goTop = (element) => {
+    //gets all of the elements
     let elements = document.getElementsByClassName('part-container');
     let zI = 0;
+    //loop throught and find the highest z_index, and subtract one from other z_indexes
+    //so the number will not increase
     for (let i = 0; i < elements.length; i++) {
         let index = parseInt(elements[i].style.zIndex);
         if (!index) { index = 0 }
         if (index > parseInt(element.style.zIndex) && element != elements[i]) {
-            elements[i].style.zIndex = parseInt(elements[i].style.zIndex) - 1
+            elements[i].style.zIndex = parseInt(elements[i].style.zIndex) - 1;
         }
         if (index > zI) {
             zI = index;
         }
     }
+    //set the z_index of the element to be the hightest
     element.style.zIndex = zI;
     zI = 0;
 }
 
 // returns the highest z-index so that all of the windows have differnt z-indexes
+// used when new windows are added and makes it so that the windows all have different z_indexes
 var returnTop = () => {
     let elements = document.getElementsByClassName('part-container');
     let zIndex = 0;
     for (let i = 0; i < elements.length; i++) {
         let index = parseInt(elements[i].style.zIndex);
         if (!index || index < 1) { index = 0; elements[i].style.zIndex = 0 }
-        console.log(index)
         if (index > zIndex) { zIndex = index }
 
     }
 
-    return (zIndex + 1)
+    return (zIndex + 1);
 }
 
 
@@ -88,7 +93,7 @@ function saveWindow(posX, posY, zI, width, height, type) {
     this.type = type;
 }
 
-//makes json file and saves the windows
+//makes json file and saves the windows in localStorages
 function saveWindows() {
     let savedata = [];
     let savedWindows = document.getElementsByClassName('part-container');
@@ -101,7 +106,7 @@ function saveWindows() {
 
 }
 
-//saves dark/light mode
+//saves dark/light mode in localStorage
 function saveTheme() {
     switch (appearance) {
         case 'auto':
@@ -116,7 +121,7 @@ function saveTheme() {
             break;
     }
 }
-
+//runs the saveWindows and saveTheme functions when page is reloaded
 window.addEventListener('beforeUnload', () => { saveWindows(); saveTheme() })
 window.addEventListener('unload', () => { saveWindows(); saveTheme() })
 
@@ -127,19 +132,19 @@ function loadWindows() {
     for (let i = 0; i < savedata.length; i++) {
         switch (savedata[i].type) {
             case 'calculator':
-                calculator = create(`<div class="part-container calculator" onmousedown = "goTop(this)" style="z-index:${savedata[i].zI};left:${savedata[i].posX};top:${savedata[i].posY};width:${savedata[i].width};height:${savedata[i].height}"><div class="drag-bar" onmousedown="dragStart(this)"><p>calculator</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/Calculator/index.html"></iframe></div>`)
+                calculator = create(`<div class="part-container calculator" onmousedown = "goTop(this)" style="z-index:${savedata[i].zI};left:${savedata[i].posX};top:${savedata[i].posY};width:${savedata[i].width};height:${savedata[i].height}"><div class="drag-bar" onmousedown="dragStart(this)"><p>calculator</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/Calculator/index.html"></iframe></div>`);
                 container.appendChild(calculator);
                 break;
             case 'dictionary':
-                dictionary = create(`<div class="part-container dictionary" onmousedown = "goTop(this)" style="z-index:${savedata[i].zI};left:${savedata[i].posX};top:${savedata[i].posY};width:${savedata[i].width};height:${savedata[i].height}"><div class="drag-bar" onmousedown="dragStart(this)"><p>dictionary</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/Dictionary/index.html"></iframe></div>`)
+                dictionary = create(`<div class="part-container dictionary" onmousedown = "goTop(this)" style="z-index:${savedata[i].zI};left:${savedata[i].posX};top:${savedata[i].posY};width:${savedata[i].width};height:${savedata[i].height}"><div class="drag-bar" onmousedown="dragStart(this)"><p>dictionary</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/Dictionary/index.html"></iframe></div>`);
                 container.appendChild(dictionary);
                 break;
             case 'snake':
-                snake = create(`<div class="part-container snake" onmousedown = "goTop(this)" style="z-index:${savedata[i].zI};left:${savedata[i].posX};top:${savedata[i].posY};width:${savedata[i].width};height:${savedata[i].height}"><div class="drag-bar" onmousedown="dragStart(this)"><p>snake</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/Snake/index.html"></iframe></div>`)
+                snake = create(`<div class="part-container snake" onmousedown = "goTop(this)" style="z-index:${savedata[i].zI};left:${savedata[i].posX};top:${savedata[i].posY};width:${savedata[i].width};height:${savedata[i].height}"><div class="drag-bar" onmousedown="dragStart(this)"><p>snake</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/Snake/index.html"></iframe></div>`);
                 container.appendChild(snake);
                 break;
             case 'note':
-                note = create(`<div class="part-container note" onmousedown = "goTop(this)" style="z-index:${savedata[i].zI};left:${savedata[i].posX};top:${savedata[i].posY};width:${savedata[i].width};height:${savedata[i].height}"><div class="drag-bar" onmousedown="dragStart(this)"><p>notes</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/Notes/index.html"></iframe></div>`)
+                note = create(`<div class="part-container note" onmousedown = "goTop(this)" style="z-index:${savedata[i].zI};left:${savedata[i].posX};top:${savedata[i].posY};width:${savedata[i].width};height:${savedata[i].height}"><div class="drag-bar" onmousedown="dragStart(this)"><p>notes</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/Notes/index.html"></iframe></div>`);
                 container.appendChild(note);
         }
     }
@@ -150,13 +155,15 @@ function loadTheme() {
     let savedAppearance = localStorage.getItem('theme');
     switch (savedAppearance) {
         case 'auto':
-            auto()
+            auto();
             break;
         case 'light':
-            lightmode()
+            lightmode();
             break;
         case 'dark':
-            darkmode()
+            darkmode();
     }
 }
+
+//loads windows when the website loads
 window.addEventListener('load', () => { loadWindows(); loadTheme() });
