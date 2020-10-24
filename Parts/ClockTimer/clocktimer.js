@@ -10,5 +10,3 @@ function showTaps(event, tapName) {
     document.getElementById(tapName).style.display = "block";
     event.currentTarget.className += " opened";
 }
-
-
