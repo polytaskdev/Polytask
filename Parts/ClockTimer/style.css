@@ -159,3 +159,9 @@ h1 {
   transform: translateY(-50%);
 
 }
+
+
+
+.btn:hover {
+  background-color: #ccc;
+}
