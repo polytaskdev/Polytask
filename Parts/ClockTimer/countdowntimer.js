@@ -6,6 +6,9 @@ var sec = document.getElementById("sec-cdt");
 var startTimer = null;
 
 function timer() {
+    hour.value = Number(hour.value)
+    minute.value = Number(minute.value)
+    sec.value = Number(sec.value)
     if (hour.value == 0 && minute.value == 0 && sec.value == 0) {
     } else if (sec.value != 0) {
         sec.value--;
@@ -33,10 +36,8 @@ function stopInterval() {
 }
 
 finished.addEventListener('click', function () {
-    hour.value = 0;
-    minute.value = 0;
-    sec.value = 0;
+    hour.value = "";
+    minute.value = "";
+    sec.value = "";
     stopInterval();
 })
-
-

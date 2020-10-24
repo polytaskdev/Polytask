@@ -2,42 +2,46 @@
 <html>
 
 <head>
-  <title>Clocktimer</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+    <title>Clocktimer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="tabs">
-    <button class="tablinks" onclick="showTaps(event, 'Clock')">Clock</button>
-    <button class="tablinks" onclick="showTaps(event, 'countDownTimer')">Count Down</button>
-    <button class="tablinks" onclick="showTaps(event, 'Timer')">Timer</button>
+    <div class="tabs">
+        <button class="tablinks" onclick="showTaps(event, 'Clock')">Clock</button>
+        <button class="tablinks" onclick="showTaps(event, 'countDownTimer')">Count Down</button>
+        <button class="tablinks" onclick="showTaps(event, 'Timer')">Timer</button>
 
-  </div>
-
-  <div id="Clock" class="tabContent">
-    <h1>This is the clock...</h1>
-  </div>
-
-  <div id="countDownTimer" class="tabContent">
-
-    <div id="countDownTimerContainer">
-      <input id="hour-cdt" type="number" max="24" min=0 value="0" class="timer-cdt">
-      <p id="p1" class="semi">:</p>
-      <input id="minute-cdt" type="number" max="24" min=0 value="0" class="timer-cdt">
-      <p id="p2" class="semi">:</p>
-      <input id="sec-cdt" type="number" max="24" min=0 value="0" class="timer-cdt">
-      <button id="finished-btn" class="btn">&nbsp;Done</button>
-      <button id="start-btn" class="btn">&nbsp;&nbsp;&nbsp;&nbsp;Start</button>
     </div>
-  </div>
 
-  <div id="Timer" class="tabContent">
-    <h1>This is the Time Counter...</h1>
-  </div>
-  <script src="countdowntimer.js"></script>
-  <script src="clocktimer.js"></script>
+    <div id="Clock" class="tabContent">
+        <h1>This is the clock...</h1>
+    </div>
+
+    <div id="countDownTimer" class="tabContent">
+
+        <div id="countDownTimerContainer">
+            <div id="cdt-input-container">
+                <input class="cdt-input" id="hour-cdt" type="text" class="timer-cdt">
+                <p id="p1" class="semi">:</p>
+                <input class="cdt-input" id="minute-cdt" type="text" class="timer-cdt">
+                <p id="p2" class="semi">:</p>
+                <input class="cdt-input" id="sec-cdt" type="text" class="timer-cdt">
+            </div>
+            <div id="cdt-button-container">
+                <button id="finished-btn" class="btn">Done</button>
+                <button id="start-btn" class="btn">Start</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="Timer" class="tabContent">
+        <h1>This is the Time Counter...</h1>
+    </div>
+    <script src="countdowntimer.js"></script>
+    <script src="clocktimer.js"></script>
 </body>
 
 </html>

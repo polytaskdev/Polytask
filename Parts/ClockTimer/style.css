@@ -2,168 +2,116 @@ body {
     font-family: Roboto, sans-serif;
     background-color: rgb(255, 133, 51);
 }
-    
+
 
 .tabs {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  background-color: #f1f1f1;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #f1f1f1d0;
 }
 
 .tabs button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
+    background-color: transparent;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    border-radius: 8px;
 }
 
 
 .tabs button:hover {
-  background-color: #ddd;
+    color: black;
+    background-color: #ffffff60;
 }
 
+.tabs button:active{
+    background-color: #ffffff90;
+}
 
 .tabs button.opened {
-  background-color: #ccc;
+    background-color: #ffffffa0;
 }
 
 .tabContent {
-  display: none;
-  padding: 6px 12px;
-  border-top: none;
-  text-align: center;
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+    text-align: center;
 }
 
 h1 {
-  color: white;
-  font-family: Roboto, sans-serif;
-  text-align: center;
+    color: white;
+    font-family: Roboto, sans-serif;
+    text-align: center;
 }
 
 #countDownTimerContainer {
-  position: relative;
-  top: 200px;
-  height: 200px;
-  width: 700px;
-  background-color:white;
-  margin: 0 auto;
-  border: 5px solid white; 
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  border-radius: 20px;
+    width: 80%;
+    background-color:#f1f1f1d0;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 10px;
+    padding: 20px 0px 20px 0px;
 }
 
+#cdt-input-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.cdt-input{
+    background-color: #c0c0c0a0;
+    border:none;
+    border-radius: 5px;
+    font-size: 20px;
+    width:40px;
+    margin:10px;
+    text-align: center;
+}
 
 #hour-cdt {
 
-  grid-area: 2 / 2 / 1 / 3;
 }
 
 #minute-cdt {
-  grid-area: 1 / 3 / 1 / 4;
+
 }
 
 #sec-cdt {
-  grid-area: 1 / 4 / 1 / 5;
+
 }
 
 
 .timer-cdt {
-  justify-self: center;
-  align-self: center;
-  border: none;
-  background-color: #ffffff00;
-  font-size: 50px;
-  width: 75px;
-  height: 50px;
+    justify-self: center;
+    align-self: center;
+    border: none;
+    background-color: #ffffff00;
+    font-size: 50px;
+    width: 75px;
+    height: 50px;
 }
 
-#hour-cdt {
-  grid-area: 2 / 2 / 2 / 3;
-}
 
 .semi {
-  position: relative;
-  right: 25px;
-  justify-self: center;
-  align-self: center;
-
-  font-size: 30px;
-  margin: 0;
+    font-size: 20px;
 }
-#p1 {
-  grid-area: 2 / 2 / 2 / 4;
-}
-
-#minute-cdt {
-  grid-area: 2 / 3 / 2 / 4;
-}
-
-#p2 {
-  grid-area: 2 / 3 / 2 / 5;
-}
-
-#sec-cdt {
-  grid-area: 2 / 4 / 2 / 5;
-}
-
-
 
 .btn {
-  position: relative;
-  top: 200px;
-
-  align-self: center;
-  border-radius: 70px;
-  width: 100px;
-  height: 40px;
-  font-size: 30px;
-  justify-self: center;
+    border-radius: 5px;
+    width: 82px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border:none;
+    font-size: 20px;
 }
-
-#finished-btn {
-  grid-area: 3 / 2 / 3 / 4;
-  margin: 0;
-  position: absolute;
-  top: 250%;
-  right: 200%;
-  width: 175px;
-  height: 175px;
-  border-radius: 50%;
-  border-color: black ;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-#start-btn {
-  text-align: center;
-  border-color: black ;
-  grid-area: 3 / 3 / 3 / 5;
-  padding-right: 125px;
-  padding-left: 20px;
-  position: relative;
-  left: 50px;
-  margin: 0;
-  position: absolute;
-  top: 260%;
-  right: 100%;
-  left: 550px;
-  width: 175px;
-  height: 175px;
-  border-radius: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-
-}
-
-
 
 .btn:hover {
-  background-color: #ccc;
+    background-color: #ccc;
 }
