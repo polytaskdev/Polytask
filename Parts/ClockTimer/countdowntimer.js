@@ -14,6 +14,7 @@ function timer() {
     minute.value = parseInt(minute.value)
     sec.value = parseInt(sec.value)
     if (hour.value == 0 && minute.value == 0 && sec.value == 0) {
+        stopInterval();
     } else if (sec.value != 0) {
         sec.value--;
     } else if (minute.value != 0 && sec.value == 0) {
@@ -23,6 +24,7 @@ function timer() {
         minute.value = 60;
         hour.value--;
     }
+
     return;
 }
 

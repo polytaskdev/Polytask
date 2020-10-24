@@ -37,6 +37,12 @@ var addNote = () => {
     container.appendChild(note);
 }
 
+var addTimer = () => {
+    container = document.getElementById('main-container');
+    timer = create(`<div class="part-container timer" onmousedown = "goTop(this)" style="z-index:${returnTop()}"><div class="drag-bar" onmousedown="dragStart(this)"><p>Timer/Clock</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/ClockTimer/index.html"></iframe></div>`);
+    container.appendChild(timer);
+}
+
 
 
 //deletes window
@@ -146,6 +152,10 @@ function loadWindows() {
             case 'note':
                 note = create(`<div class="part-container note" onmousedown = "goTop(this)" style="z-index:${savedata[i].zI};left:${savedata[i].posX};top:${savedata[i].posY};width:${savedata[i].width};height:${savedata[i].height}"><div class="drag-bar" onmousedown="dragStart(this)"><p>Notes</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/Notes/index.html"></iframe></div>`);
                 container.appendChild(note);
+                break;
+            case 'timer':
+                timer = create(`<div class="part-container timer" onmousedown = "goTop(this)" style="z-index:${savedata[i].zI};left:${savedata[i].posX};top:${savedata[i].posY};width:${savedata[i].width};height:${savedata[i].height}"><div class="drag-bar" onmousedown="dragStart(this)"><p>Timer/Clock</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/ClockTimer/index.html"></iframe></div>`);
+                container.appendChild(timer);
         }
     }
 }

@@ -261,6 +261,15 @@ p{
     border: 5px solid #d6ba35;
 }
 
+.timer{
+    width: 255px;
+    height: 250px;
+    background-color: rgb(255, 133, 51);
+    color: black;
+    border: 5px solid rgb(245, 123, 41);
+    resize: none;
+}
+
 
 iframe{
     width: 100%;
