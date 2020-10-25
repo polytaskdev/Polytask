@@ -66,8 +66,8 @@ h1 {
     background-color: #c0c0c0a0;
     border:none;
     border-radius: 5px;
-    font-size: 20px;
-    width:40px;
+    font-size: 15vmin;
+    width:20vmin;
     margin:10px;
     text-align: center;
 }
@@ -97,16 +97,16 @@ h1 {
 
 
 .semi {
-    font-size: 20px;
+    font-size: 10vmin;
 }
 
 .btn {
     border-radius: 5px;
-    width: 82px;
+    width: 30vmin;
     margin-left: 5px;
     margin-right: 5px;
     border:none;
-    font-size: 20px;
+    font-size: 10vmin;
 }
 
 .btn:hover {
