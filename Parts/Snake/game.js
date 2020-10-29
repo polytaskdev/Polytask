@@ -22,6 +22,10 @@ snake[0] ={
 
 let dir; document.addEventListener("keydown", direction);
 
+function restart(){
+    
+}
+
 //Seting the direction being pressed by arrow keys
 function direction(event)
 {
