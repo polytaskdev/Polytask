@@ -11,6 +11,32 @@
 <body>
     <h3 id = 'header' contenteditable="true"></h3>
     <p id = 'content' contenteditable="true"></p>
+    
+    <script>
+        var text = document.getElementById('content');
+        function bold(){
+           text.style.cssText = "font-weight: bold;"
+        };
+
+        function italic(){
+          text.style.cssText = "font-style: italic;" 
+        }
+        function regular(){
+            text.style.cssText = "font-style: normal; font-weight: normal;"
+        }
+
+    </script>
+    <button id = "bold" type = "button" onclick = "bold()">
+        <b> B</b>
+    </button>
+
+    <button id ="italic" type = "button" onclick = "italic()">
+        <i> I</i>
+    </button>
+    <button id = "regular" type = "button" onclick = "regular()">
+         r
+    </button>
+
 
 </body>
 </html>
