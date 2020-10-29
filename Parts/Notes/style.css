@@ -1,5 +1,5 @@
 html,body{
-  background-color: #e6ca55;
+    background-color: #e6ca55;
   font-size: 14px;
   font-family: 'Roboto', sans-serif;
   padding: 0;
@@ -19,7 +19,7 @@ button{
     background-color: #e6ca55;
     padding:15px 15px;
     position:absolute;
-    top:90%
+    bottom:0px
 }
 
 #bold{

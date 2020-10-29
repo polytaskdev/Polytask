@@ -120,6 +120,7 @@ function draw(){
         {
             clearInterval(game);
             window.location.reload();
+            restart()
         };
 
 
