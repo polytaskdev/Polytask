@@ -14,7 +14,7 @@ function startWatch() {
         interval = setInterval(function () {
             newTime = new Date().getTime();
             if (savedTime) {
-                difference = (newTime - startTime) + savedTime;
+                difference = newTime - startTime + savedTime;
             } else {
                 difference = newTime - startTime;
             }

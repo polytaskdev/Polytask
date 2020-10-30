@@ -106,13 +106,46 @@ h1 {
 
 /* StopWatch */
 
-#show-time {
-    background-color: grey;
-    border: 2px solid grey;
-    
-}
+
 
 .btn-swc {
-    position: relative;
-    top:20%;
+    border-radius: 10px;
+    width: 40vmin;
+    margin-left: 5px;
+    padding-left: 10px;
+    margin-right: 5px;
+    border:none;
+    font-size: 10vmin;
+}
+
+
+
+
+.btn-swc:hover {
+    background-color: #ccc;
+}
+
+
+
+#reset-swc {
+    width: 250px;
+}
+
+
+
+#stopWatchContainer {
+    background-color:#f1f1f1d0;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 20px 0px 20px 0px;
+}
+
+
+
+#show-time {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 6em;
+    
 }
