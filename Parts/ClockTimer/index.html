@@ -11,8 +11,8 @@
 <body>
     <div class="tabs">
         <button class="tablinks" onclick="showTaps(event, 'Clock')">Clock</button>
-        <button class="tablinks" onclick="showTaps(event, 'countDownTimer')">Count Down</button>
-        <button class="tablinks" onclick="showTaps(event, 'Timer')">Timer</button>
+        <button class="tablinks" onclick="showTaps(event, 'countDownTimer')">CountDown</button>
+        <button class="tablinks" onclick="showTaps(event, 'stopwatch')">StopWatch</button>
 
     </div>
 
@@ -37,10 +37,18 @@
         </div>
     </div>
 
-    <div id="Timer" class="tabContent">
-        <h1>This is the Time Counter...</h1>
+    <div id="stopwatch" class="tabContent">
+        <div id="stopWatchContainer">
+            <p id="show-time">00:00:00</p>
+            <div id="controls-swc">
+                <button id="start-pause-swc" class="btn-swc" onclick="startWatch()">Start</button>
+                <button id="reset-swc" class="btn-swc" onclick="stopWatch()">Reset</button>
+            </div>
+        </div>
+
     </div>
     <script src="countdowntimer.js"></script>
+    <script src="stopwatch.js"></script>
     <script src="clocktimer.js"></script>
 </body>
 
