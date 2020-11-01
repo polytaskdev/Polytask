@@ -22,9 +22,7 @@ snake[0] ={
 
 let dir; document.addEventListener("keydown", direction);
 
-function restart(){
-    
-}
+
 
 //Seting the direction being pressed by arrow keys
 function direction(event)
@@ -52,7 +50,6 @@ food = {
     x :(bsize- fx) * scale,
     y :(bsize- fy) * scale
 }
-
 
 
 
@@ -105,13 +102,44 @@ function draw(){
         x : snakeX,
         y : snakeY
     };
+   
+
+    //Making the food
+    ctx.fillStyle = "#DF4A1B";
+    roundRect(ctx, food.x, food.y, scale, scale,5,true,false);
+
+    //Score
+
+    ctx.fillStyle = "white";
+    ctx.font = "18px Roboto";
+    ctx.fillText("score: "+score, scale, 0.8 * scale);
+
+
+
+    //Restart screen
+    function restart(){
+        //window.location.reload()
+        ctx.fillStyle = "#7B9C3D";
+        ctx.fillRect(0,0,canvas.height,canvas.width);
+        ctx.fillStyle = "white";
+        ctx.font = "40px Roboto";
+        ctx.textAlign = "center";
+        ctx.fillText("\tYou Failed", 300,200);
+        ctx.fillText(" Score : "+score, 300,250);
+        ctx.fillText(" Press any key to restart", 300,300);
+        document.addEventListener('keyup',() => {
+            window.location.reload()
+        })
+
+        console.log("restart")
+    };
+
 
        //Collision detection
     function collision(head, array){
         for(let i = 0; i<array.length; i++){
           if(head.x == array[i].x && head.y == array[i].y ){
               return true;
-              console.log("collided")
 
           };
         };
@@ -123,23 +151,12 @@ function draw(){
         collision(newHead, snake))
         {
             clearInterval(game);
-            window.location.reload();
+            //window.location.reload();
             restart()
         };
 
 
     snake.unshift(newHead);
-    //Making the food
-    ctx.fillStyle = "#DF4A1B";
-    roundRect(ctx, food.x, food.y, scale, scale,5,true,false);
-
-    //Score
-
-    ctx.fillStyle = "white";
-    ctx.font = "18px Avenir";
-    ctx.fillText("score: "+score, scale, 0.8 * scale);
-
-
 }
 
 
