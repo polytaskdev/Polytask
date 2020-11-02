@@ -162,11 +162,13 @@ h1 {
 
 .clock {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width:50vmin;
+    height:50vmin;
     border-radius: 50%;
-    border: 2px solid black;
-    background-color: rgba(255, 179, 102, 0.8);
+    border: 10px solid black;
+    background-color: rgba(255,255,255,0.2);
+    -webkit-user-select: none;
+    -moz-user-select: none;
 }
 
 
@@ -178,7 +180,8 @@ h1 {
     text-align: center;
     --rotation: 0;
     transform: rotate(var(--rotation));
-    font-size: 1.39em;
+    font-size: 2vmin;
+    font-weight: bolder;
 } 
 
 
@@ -232,7 +235,7 @@ h1 {
 }
 
 
-/* some time pointer or whatever it is call */
+/* some time pointer or whatever it is called */
 .time-pointer {
     position: absolute;
     background-color: black;
@@ -248,19 +251,19 @@ h1 {
 
 
 .time-secs {
-    width: 3px;
+    width: 1vmin;
     height: 45%;
     background-color: red;
 }
 
 .time-mins {
-    width: 7px;
+    width: 2vmin;
     height: 40%;
     background-color: black;
 }
 
 .time-hour {
-    width: 11px;
+    width: 2.5vmin;
     height: 35%;
     background-color: grey;
 }
@@ -268,12 +271,11 @@ h1 {
 .clock::after {
     content: '';
     position: absolute;
-    background-color: rgb(255, 128, 0);
-    width: 18px;
-    height: 19px;
-    right: 50%;
-    top: 45%;
-    transform: translate(50%, 50%);
+    background-color: black;
+    width: 5vmin;
+    height: 5vmin;
+    left: calc(50% - 2.5vmin);
+    top: calc(50% - 2.5vmin);
     z-index: 11;
     border-radius: 50%;
 }
@@ -281,7 +283,12 @@ h1 {
 
 .current-time {
     position: absolute;
-    bottom: 29%;
-    font-size: 3em;
-    
+    bottom: 0px;
+    font-size: 6vmin;
+    margin:0;
+    background-color: rgba(255,255,255,0.4);
+    display: block;
+    border-radius: 5px;
+    line-height: 0px;
+    padding: 0px 15px 0px 15px;
 }
