@@ -17,8 +17,8 @@ You need a:
 
 ## How to run
 To run Polytask you need to:
-1. Clone this repository
-2. Open the index.html
+1. Go to [Polytask](https://polytask.github.io/)
+2. Now you are ready to multitask
 
 ### Font
 the font is roboto, and if you have any issues, install it here :
