@@ -18,6 +18,6 @@ You need a:
 
 ## How to run
 To run Polytask you need to:
-1. Go to [Polytask](https://polytask.github.io/)
+1. Go to [Polytask](https://polytaskdev.github.io/Polytask/)
 2. Now you are ready to multitask
  
