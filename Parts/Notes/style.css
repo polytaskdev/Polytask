@@ -1,6 +1,6 @@
 html,body{
     position: relative;
-    overflow: scroll;
+    overflow: none;
     background-color: #e6ca55;
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
@@ -41,3 +41,6 @@ button{
 button:hover {
     background-color: rgba(255, 255, 255, 0.5);
 }
+
+
+
