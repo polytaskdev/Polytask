@@ -122,7 +122,7 @@ p{
 }
 
 #clear-windows-btn:hover{
-    background-color: var(--header-secondary)
+    background-color: lightcoral;
 }
 
 
