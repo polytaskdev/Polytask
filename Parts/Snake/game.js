@@ -129,7 +129,7 @@ function draw() {
         ctx.fillText(" Score : " + score, 300, 200);
         ctx.fillText(" Press any key to restart", 300, 350);
         localStorage.setItem('highestScore', highestScore);
-        ctx.fillText(" highestScore: " + localStorage.getItem("High Score"), 300, 250);
+        ctx.fillText(" High Score: " + localStorage.getItem("highestScore"), 300, 250);
         document.addEventListener('keyup', () => {
             window.location.reload();
         })
