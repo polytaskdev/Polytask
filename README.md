@@ -22,3 +22,5 @@ To run Polytask you need to:
 1. Go to [Polytask](https://polytaskdev.github.io/Polytask/)
 2. Now you are ready to multitask
  
+## Author
+Zhenyu Liang (Adv), Tony, Sumah
