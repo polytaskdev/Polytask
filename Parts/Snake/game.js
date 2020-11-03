@@ -157,7 +157,7 @@ function draw() {
         collision(newHead, snake)) {
         clearInterval(game);
         //window.location.reload();
-        setTimeout(restart(), 1500)
+        setTimeout(restart(), 2000)
     };
 
 
