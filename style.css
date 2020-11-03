@@ -110,7 +110,7 @@ p{
 
 
 #clear-windows-btn{
-    background-color: red;
+    background-color: transparent;
     font-size: 22px;
     border: none;
     float: right;
@@ -122,9 +122,8 @@ p{
 }
 
 #clear-windows-btn:hover{
-    background-color: var(--header-secondary)
+    background-color: rgba(255,100,20,0.5); 
 }
-
 
 #darklight-button:hover{
     background-color: var(--header-secondary)
