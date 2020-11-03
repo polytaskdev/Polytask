@@ -9,10 +9,7 @@ var score = 0;
 var restart = false;
 var highestScore = 0;
 
-
-console.log("There are " + rows + " rows");
-console.log("There are " + columns + " columns");
-
+if(localStorage.getItem('highestScore')){highestScore=localStorage.getItem('highestScore')}
 
 let snake = [];
 
@@ -94,9 +91,6 @@ function draw() {
         if (score > highestScore) {
             highestScore = score;
         }
-        console.log(score);
-        console.log(highestScore);
-
     }
     else {
         snake.pop();
@@ -113,11 +107,12 @@ function draw() {
     roundRect(ctx, food.x, food.y, scale, scale, 5, true, false);
 
     //Score
-
     ctx.fillStyle = "white";
-    ctx.font = "18px Roboto";
+    ctx.font = "18px sans-serif";
+    ctx.textAlign = "left"
     ctx.fillText("score: " + score, scale, 0.8 * scale);
-    ctx.fillText(" Highest Score: " + highestScore, scale, 2 * scale);
+    ctx.textAlign = "right"
+    ctx.fillText("High Score: " + highestScore, scale*29, 0.8 * scale);
 
 
 
@@ -128,16 +123,16 @@ function draw() {
         ctx.fillStyle = "#7B9C3D";
         ctx.fillRect(0, 0, canvas.height, canvas.width);
         ctx.fillStyle = "white";
-        ctx.font = "40px Roboto";
+        ctx.font = "40px sans-serif";
         ctx.textAlign = "center";
         ctx.fillText("\tYou Failed", 300, 200);
         ctx.fillText(" Score : " + score, 300, 250);
         ctx.fillText(" Press any key to restart", 300, 300);
+        localStorage.setItem('highestScore',highestScore)
         document.addEventListener('keyup', () => {
             window.location.reload()
         })
 
-        console.log("restart")
     };
 
 
