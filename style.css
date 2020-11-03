@@ -55,16 +55,6 @@ p{
     display:block;
 }
 
-#clear-all-windows {
-    position: absolute;
-    right:100px;
-    top: 7px
-
-}
-
-#clear-all-windows:hover {
-    display: block;
-}
 
 .drop-down{
     display: none;
@@ -114,15 +104,24 @@ p{
     font-size: 22px;
     border: none;
     float: right;
+    border-radius: 5px;
     width: 28px;
     height: 28px;
-    border-radius: 5px;
     text-align: center;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, color 0.2s;
+    padding:1px 2px 2px 2px;
+    box-sizing:border-box;
+    position:absolute;
+    right: 105px;
 }
 
 #clear-windows-btn:hover{
-    background-color: rgba(255,100,20,0.5); 
+    background-color: var(--header-secondary); 
+    color:rgb(200,20,0);
+}
+
+#clear-windows-btn:active{
+    background-color: rgba(255,50,0,0.5);
 }
 
 #darklight-button:hover{

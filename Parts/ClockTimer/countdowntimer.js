@@ -5,15 +5,21 @@ var minute = document.getElementById("minute-cdt");
 var sec = document.getElementById("sec-cdt");
 var startTimer = null;
 var endTime;
+
 function timer() {
     let currentTime = Date.now();
     currentTime = Math.floor(currentTime / 1000);
     let timeLeft = endTime - currentTime;
     if (timeLeft <= 0) {
+        var alarm_sound = new Audio();
+        alarm_sound.src = "wakeup.m4a";
+        alarm_sound.play();
         hour.value = "";
         minute.value = "";
         sec.value = "";
         stopInterval();
+
+
     } else {
         hour.value = Math.floor(timeLeft / 3600);
         minute.value = Math.floor((timeLeft % 3600) / 60);
