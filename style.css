@@ -55,6 +55,17 @@ p{
     display:block;
 }
 
+#clear-all-windows {
+    position: absolute;
+    right:100px;
+    top: 7px
+
+}
+
+#clear-all-windows:hover {
+    display: block;
+}
+
 .drop-down{
     display: none;
     margin-top: 30px;
@@ -94,6 +105,28 @@ p{
 }
 
 #plus-button:hover{
+    background-color: var(--header-secondary)
+}
+
+
+#clear-windows-btn{
+    background-color: red;
+    font-size: 22px;
+    border: none;
+    float: right;
+    width: 28px;
+    height: 28px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+#clear-windows-btn:hover{
+    background-color: var(--header-secondary)
+}
+
+
+#darklight-button:hover{
     background-color: var(--header-secondary)
 }
 

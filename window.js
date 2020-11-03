@@ -163,8 +163,8 @@ function loadWindows() {
                 calculator = create(
                     `<div class="part-container calculator" onmousedown = "goTop(this)" style="z-index:${savedata[i]
                         .zI};left:${savedata[i].posX};top:${savedata[i].posY};width:${savedata[i]
-                        .width};height:${savedata[i]
-                        .height}"><div class="drag-bar" onmousedown="dragStart(this)"><p>Calculator</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/Calculator/index.html"></iframe></div>`
+                            .width};height:${savedata[i]
+                                .height}"><div class="drag-bar" onmousedown="dragStart(this)"><p>Calculator</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/Calculator/index.html"></iframe></div>`
                 );
                 container.appendChild(calculator);
                 break;
@@ -172,8 +172,8 @@ function loadWindows() {
                 dictionary = create(
                     `<div class="part-container dictionary" onmousedown = "goTop(this)" style="z-index:${savedata[i]
                         .zI};left:${savedata[i].posX};top:${savedata[i].posY};width:${savedata[i]
-                        .width};height:${savedata[i]
-                        .height}"><div class="drag-bar" onmousedown="dragStart(this)"><p>Dictionary</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/Dictionary/index.html"></iframe></div>`
+                            .width};height:${savedata[i]
+                                .height}"><div class="drag-bar" onmousedown="dragStart(this)"><p>Dictionary</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/Dictionary/index.html"></iframe></div>`
                 );
                 container.appendChild(dictionary);
                 break;
@@ -181,8 +181,8 @@ function loadWindows() {
                 snake = create(
                     `<div class="part-container snake" onmousedown = "goTop(this)" style="z-index:${savedata[i]
                         .zI};left:${savedata[i].posX};top:${savedata[i].posY};width:${savedata[i]
-                        .width};height:${savedata[i]
-                        .height}"><div class="drag-bar" onmousedown="dragStart(this)"><p>Snake</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/Snake/index.html"></iframe></div>`
+                            .width};height:${savedata[i]
+                                .height}"><div class="drag-bar" onmousedown="dragStart(this)"><p>Snake</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/Snake/index.html"></iframe></div>`
                 );
                 container.appendChild(snake);
                 break;
@@ -190,8 +190,8 @@ function loadWindows() {
                 note = create(
                     `<div class="part-container note" onmousedown = "goTop(this)" style="z-index:${savedata[i]
                         .zI};left:${savedata[i].posX};top:${savedata[i].posY};width:${savedata[i]
-                        .width};height:${savedata[i]
-                        .height}"><div class="drag-bar" onmousedown="dragStart(this)"><p>Notes</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/Notes/index.html"></iframe></div>`
+                            .width};height:${savedata[i]
+                                .height}"><div class="drag-bar" onmousedown="dragStart(this)"><p>Notes</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/Notes/index.html"></iframe></div>`
                 );
                 container.appendChild(note);
                 break;
@@ -199,8 +199,8 @@ function loadWindows() {
                 timer = create(
                     `<div class="part-container timer" onmousedown = "goTop(this)" style="z-index:${savedata[i]
                         .zI};left:${savedata[i].posX};top:${savedata[i].posY};width:${savedata[i]
-                        .width};height:${savedata[i]
-                        .height}"><div class="drag-bar" onmousedown="dragStart(this)"><p>Timer/Clock</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/ClockTimer/index.html"></iframe></div>`
+                            .width};height:${savedata[i]
+                                .height}"><div class="drag-bar" onmousedown="dragStart(this)"><p>Timer/Clock</p></div><button onclick="closeWindow(this)">×</button><iframe src="Parts/ClockTimer/index.html"></iframe></div>`
                 );
                 container.appendChild(timer);
         }
@@ -227,3 +227,9 @@ window.addEventListener('load', () => {
     loadWindows();
     loadTheme();
 });
+
+
+
+function clearAllWindows() {
+    document.getElementById("main-container").innerHTML = "";
+}
