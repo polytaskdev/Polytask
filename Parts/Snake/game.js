@@ -9,7 +9,7 @@ var score = 0;
 var restart = false;
 var highestScore = 0;
 
-if(localStorage.getItem('highestScore')){highestScore=localStorage.getItem('highestScore')}
+if (localStorage.getItem('highestScore')) { highestScore = localStorage.getItem('highestScore') }
 
 let snake = [];
 
@@ -112,7 +112,7 @@ function draw() {
     ctx.textAlign = "left"
     ctx.fillText("score: " + score, scale, 0.8 * scale);
     ctx.textAlign = "right"
-    ctx.fillText("High Score: " + highestScore, scale*29, 0.8 * scale);
+    ctx.fillText("High Score: " + highestScore, scale * 29, 0.8 * scale);
 
 
 
@@ -125,12 +125,13 @@ function draw() {
         ctx.fillStyle = "white";
         ctx.font = "40px sans-serif";
         ctx.textAlign = "center";
-        ctx.fillText("\tYou Failed", 300, 200);
-        ctx.fillText(" Score : " + score, 300, 250);
-        ctx.fillText(" Press any key to restart", 300, 300);
-        localStorage.setItem('highestScore',highestScore)
+        ctx.fillText("\tYou Failed", 300, 150);
+        ctx.fillText(" Score : " + score, 300, 200);
+        ctx.fillText(" Press any key to restart", 300, 350);
+        localStorage.setItem('highestScore', highestScore);
+        ctx.fillText(" highestScore: " + localStorage.getItem("highestScore"), 300, 250);
         document.addEventListener('keyup', () => {
-            window.location.reload()
+            window.location.reload();
         })
 
     };
