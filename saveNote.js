@@ -25,7 +25,6 @@ loadNote = () => {
     for (let i = 0; i < notes.length; i++) {
         let note = notes[i];
         let iframe = note.getElementsByTagName('iframe');
-        console.log(iframe, i);
         iframe[0].addEventListener('load', () => {
             iframe[0].contentWindow.document.getElementById('header').innerHTML = saveNoteData[i].header;
             iframe[0].contentWindow.document.getElementById('content').innerHTML = saveNoteData[i].content;
