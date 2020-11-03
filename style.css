@@ -85,6 +85,8 @@ p{
 }
 
 #plus-button{
+    font-size: 1em;
+    border: none;
     float: right;
     width: 28px;
     height: 28px;
@@ -98,6 +100,7 @@ p{
 }
 
 #darklight-button{
+    border: none;
     float: right;
     width: 28px;
     height: 28px;
