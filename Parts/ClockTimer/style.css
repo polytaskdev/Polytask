@@ -111,6 +111,7 @@ h1 {
 
 
 .btn-swc {
+    box-sizing: border-box;
     border-radius: 5px;
     width: 30vmin;
     margin-left: 5px;
