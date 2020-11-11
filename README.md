@@ -22,5 +22,10 @@ To run Polytask you need to:
 1. Go to [Polytask](https://polytaskdev.github.io/Polytask/)
 2. Now you are ready to multitask
  
-## Author
+## Creators
 Zhenyu Liang (Adv), Tony, Sumah
+
+### Tony Zhang
+Hi! it was really fun participating in this Code Jam. I meet some great people on the discord server. 
+I am a 13 year old in 8th grade.
+visit my website if you want [tonyzhang.net](http://tonyzhang.net)
