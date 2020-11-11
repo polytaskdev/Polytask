@@ -14,7 +14,7 @@ Polytask includes multiple features listed below:
 You need a:
 - Web Browser
 - A Computer
-- A brain and the ability to use it
+- A brain
 - Oxygen
 - And something idk
 
