@@ -16,6 +16,7 @@ You need a:
 - A Computer
 - A brain and the ability to use it
 - Oxygen
+- And something idk
 
 ## How to run
 To run Polytask you need to:
