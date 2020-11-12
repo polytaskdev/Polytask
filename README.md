@@ -1,6 +1,6 @@
 # [Polytask](https://polytaskdev.github.io/Polytask/)
 ![image](logo.png)
-A website that helps with multitasking during school by having some of the most common things you need. Instead of having to open multiple tabs for a calculator, dictionary, to write some quick notes etc, just use polytask. It increase your productivity and it helps you to get a better grade on the exam. website: https://polytaskdev.github.io/Polytask
+A website that helps with multitasking during school by having some of the most common things you need. Think of it as your backpack, instead of having to bring calculator, dictionary, a clock/timer/stopwatch, a notebook to take note, etc, **just use [polytask](https://polytaskdev.github.io/Polytask/)**. It increase your productivity and it will help you enjoy and learn efficiently at the same time! website: https://polytaskdev.github.io/Polytask
 
 ## Program
 Polytask is a website that is built with javascript, html, and css.
@@ -10,7 +10,7 @@ Polytask includes multiple features listed below:
 - A scientific calculator
 - A built in Dictionary
 - A timer/stopwatch/clock
-- A place to write some quick notes
+- A notebook for taking notes
 - Snake game, only if your done with your work :-)
 
 ## Prerequisites
