@@ -12,6 +12,9 @@ Polytask includes multiple features listed below:
 - A timer/stopwatch/clock
 - A notebook for taking notes
 - Snake game, only if your done with your work :-)
+- A button to add windows
+- A button to delete all windows
+- A button to switch to dark mode/light mode/auto
 
 ## Prerequisites
 You need a:
@@ -26,7 +29,12 @@ To run Polytask you need to:
 1. Go to [Polytask](https://polytaskdev.github.io/Polytask/)
 2. Click the plus button on the website to add windows
 3. Profit
- 
+
+## How to delete all windows
+To delete all windows, you just need to:
+1. Click the **x** in the upper right corner of the polytask website
+2. Then the windows will be deleted
+
 ## Creators
 Zhenyu Liang (Adv), Tony, Sumah
 
