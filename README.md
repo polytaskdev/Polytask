@@ -2,6 +2,9 @@
 ![image](logo.png)
 A website that helps with multitasking during school by having some of the most common things you need. Instead of having to open multiple tabs for a calculator, dictionary, to write some quick notes etc, just use polytask. It increase your productivity and it helps you to get a better grade on the exam. website: https://polytaskdev.github.io/Polytask
 
+## Program
+Polytask is a website that is built with javascript, html, and css.
+
 ## Features
 Polytask includes multiple features listed below:
 - A scientific calculator
@@ -16,7 +19,7 @@ You need a:
 - A Computer
 - A brain
 - Oxygen
-- And something idk
+- A ready mindset to get A+
 
 ## How to run
 To run Polytask you need to:
