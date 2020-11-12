@@ -1,6 +1,6 @@
 # [Polytask](https://polytaskdev.github.io/Polytask/)
 ![image](logo.png)
-A website, which helps with multitasking during school by having some of the most common things you need, think of it as a backpack. Instead of having to open multiple tabs for a calculator, dictionary, to write some quick notes etc, Just use polytask. It is a simple and easy way to keep productivity at a max.
+A website that helps with multitasking during school by having some of the most common things you need. Instead of having to open multiple tabs for a calculator, dictionary, to write some quick notes etc, just use polytask. It increase your productivity and it helps you to get a better grade on the exam. website: https://polytaskdev.github.io/Polytask
 
 ## Features
 Polytask includes multiple features listed below:
