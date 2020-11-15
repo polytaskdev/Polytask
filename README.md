@@ -54,7 +54,8 @@ I really enjoy this process and I can't wait to participate in the next one. ✌
 
 ### Tony Zhang
 Hi! it was really fun participating in this Code Jam. I meet some great people on the discord server. 
-I am a 13 year old in 8th grade.
+I am a 13 year old in 8th grade. This was the first time that I have worked on a programming project with other people and 
+learned how to use github and git kind of ish. really happy I participated in this competition
 visit my website if you want [tonyzhang.net](http://tonyzhang.net)
 
 ### Sumah
