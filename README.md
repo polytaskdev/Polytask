@@ -39,10 +39,10 @@ To delete all windows, you just need to:
 Zhenyu Liang (Adv), Tony, Sumah
 
 ### Zhenyu Liang
-Hello, I am Zhenyu Liang and I am 13 years old (currently in 8th grade 2020)
+Hello, I am Zhenyu Liang and I am 13 years old (currently in 8th grade 2020).
 It was a great experience participating in this Code Jam (Timathon). I learned
-a new programming language because of the Code Jam and I can't wait to participate
-in the next one. ✌
+a new programming language during this Code Jam and I met 2 great people thanks to this Code Jam.
+I really enjoy this process and I can't wait to participate in the next one. ✌
 
 
 ### Tony Zhang
