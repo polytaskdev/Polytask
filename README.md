@@ -58,4 +58,4 @@ I am a 13 year old in 8th grade.
 visit my website if you want [tonyzhang.net](http://tonyzhang.net)
 
 ### Sumah
-Hey, I'm sumah, it was alot of fun doing this codejam. I learned javascript and html, which are now very fun to code in. Working on a team for the first time (with Tony and adv) has been very cool, and nice. Although there were some timezone restrictions, we still managed to finish and have some good communication. Im looking forward to continue working on polytask, and seeing where it will go.
+Hey, I'm sumah, it was alot of fun doing this codejam. I learned javascript and html, which are now very fun to code in. Working on a team for the first time (with Tony and Zhenyu) has been very cool, and nice. Although there were some timezone restrictions, we still managed to finish and have some good communication. Im looking forward to continue working on polytask, and seeing where it will go.
