@@ -73,7 +73,7 @@ To delete all windows, you just need to:
 
 Zhenyu Liang (Adv), Tony, Sumah
 
-Other contributers : P Pranav Baburaj
+Outside contributers : P Pranav Baburaj
   
   
 
