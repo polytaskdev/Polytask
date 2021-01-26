@@ -6,6 +6,13 @@ html,body{
     color: var(--text);
 }
 
+.transform {
+    transform:rotate(180deg);
+    -ms-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+  }
+  
+
 p{
     margin: 0px;
 }

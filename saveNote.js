@@ -7,6 +7,7 @@ saveNotes = () => {
         content = iframe.contentWindow.document.getElementById('content').innerHTML;
         noteinfo = new saveNote(header, content);
         saveNoteData.push(noteinfo);
+        var notifcation = new Notification("Added a new note")
     }
     saveNoteData = localStorage.setItem('saveNotes', JSON.stringify(saveNoteData));
 };
