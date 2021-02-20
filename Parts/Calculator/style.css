@@ -31,7 +31,7 @@ body, html{
     position: relative;
     background: rgb(25,28,35);
     grid-column: 1 / span 8;
-    grid-row: 1
+    grid-row: 1;
     overflow: hidden;
 }
 

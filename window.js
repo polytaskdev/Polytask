@@ -239,32 +239,32 @@ function clearAllWindows() {
 
 updatePageRotation = true
 
-function changeUpdatePageRotation(condition){
+function changeUpdatePageRotation(condition) {
     updatePageRotation = condition
 }
 
-window.addEventListener('keydown', function(event) {
-    if(event.shiftKey && event.keyCode == 78){
+window.addEventListener('keydown', function (event) {
+    if (event.shiftKey && event.keyCode == 78) {
         // new note 
         // shift + n
         addNote()
     }
 
-    if(event.shiftKey && event.keyCode == 68){
+    if (event.shiftKey && event.keyCode == 68) {
         // new dict
         // shift + d
         addDictionary()
     }
 
-    if(event.shiftKey && event.keyCode == 67){
+    if (event.shiftKey && event.keyCode == 67) {
         addCalculator()
     }
 
-    if(event.shiftKey && event.keyCode == 84){
+    if (event.shiftKey && event.keyCode == 84) {
         addTimer()
     }
 
-    if(event.shiftKey && event.keyCode == 83){
+    if (event.shiftKey && event.keyCode == 83) {
         addSnake()
     }
 
@@ -281,39 +281,39 @@ window.addEventListener('keydown', function(event) {
 
 function checkNotificationPromise() {
     try {
-      Notification.requestPermission().then();
-    } catch(e) {
-      return false;
+        Notification.requestPermission().then();
+    } catch (e) {
+        return false;
     }
 
     return true;
-  }
+}
 
 function askNotificationPermission() {
     // function to actually ask the permissions
     function handlePermission(permission) {
-      // set the button to shown or hidden, depending on what the user answers
-      if(Notification.permission === 'denied' || Notification.permission === 'default') {
-      } else {
-      }
+        // set the button to shown or hidden, depending on what the user answers
+        if (Notification.permission === 'denied' || Notification.permission === 'default') {
+        } else {
+        }
     }
-  
+
     // Let's check if the browser supports notifications
     if (!('Notification' in window)) {
-      console.log("This browser does not support notifications.");
+        console.log("This browser does not support notifications.");
     } else {
-      if(checkNotificationPromise()) {
-        Notification.requestPermission()
-        .then((permission) => {
-          handlePermission(permission);
-        })
-      } else {
-        Notification.requestPermission(function(permission) {
-          handlePermission(permission);
-        });
-      }
+        if (checkNotificationPromise()) {
+            Notification.requestPermission()
+                .then((permission) => {
+                    handlePermission(permission);
+                })
+        } else {
+            Notification.requestPermission(function (permission) {
+                handlePermission(permission);
+            });
+        }
     }
-  }
+}
 
 
 askNotificationPermission()
