@@ -1,27 +1,27 @@
-html, body{
+html, body {
     margin: 0;
     font-family: Roboto, sans-serif;
     color: white;
-    background-color: rgb(80,120,180);
+    background-color: rgb(80, 120, 180);
 }
 
-#main-container{
+#main-container {
     padding: 10px;
 }
 
-h1{
+h1 {
     margin: 0px;
 }
 
-p{
+p {
     margin: 4px;
 }
 
-::placeholder{
-    color: rgba(255,255,255,0.4);
+::placeholder {
+    color: rgba(255, 255, 255, 0.4);
 }
 
-#search{
+#search {
     width: calc(100% - 10px);
     font-size: 25px;
     height: 1.2em;
@@ -29,11 +29,11 @@ p{
     border-radius: 5px;
     margin-bottom: 20px;
     color: white;
-    background-color: rgb(0,0,0,0.1);
+    background-color: rgb(0, 0, 0, 0.1);
     outline: none;
     padding: 5px;
 }
 
-.meaning-container{
+.meaning-container {
     padding: 10px;
 }

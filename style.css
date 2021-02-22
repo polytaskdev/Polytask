@@ -1,4 +1,4 @@
-html,body{
+html, body {
     margin: 0px;
     padding: 0px;
     font-family: Roboto, sans-serif;
@@ -7,19 +7,18 @@ html,body{
 }
 
 .transform {
-    transform:rotate(180deg);
-    -ms-transform:rotate(180deg);
-    -webkit-transform:rotate(180deg);
-  }
-  
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
 
-p{
+p {
     margin: 0px;
 }
 
-#header{
+#header {
     position: fixed;
-    top:0px;
+    top: 0px;
     background-color: var(--header);
     padding: 5px;
     width: 100%;
@@ -37,33 +36,31 @@ p{
     user-select: none;
 }
 
-.header-item{
-    float:right;
-    margin:6px;
+.header-item {
+    float: right;
+    margin: 6px;
     padding-right: 10px;
-
 }
 
-#appearance-toggle{
+#appearance-toggle {
     font-size: 20px;
     position: absolute;
     right: 50px;
 }
 
-#appearance-toggle:hover .drop-down{
+#appearance-toggle:hover .drop-down {
     display: block;
 }
 
-#add-button{
+#add-button {
     font-size: 22px;
 }
 
-#add-button:hover .drop-down{
-    display:block;
+#add-button:hover .drop-down {
+    display: block;
 }
 
-
-.drop-down{
+.drop-down {
     display: none;
     margin-top: 30px;
     background-color: var(--header);
@@ -72,27 +69,26 @@ p{
     border-radius: 10px;
     border: 1px solid var(--header-secondary);
     box-shadow: 0px 0px 5px var(--shadow);
-
 }
 
-.drop-down div{
+.drop-down div {
     box-shadow: 0px 0px 5px var(--shadow);
     border-radius: 5px;
     border: inherit;
-    margin:5px;
-    padding-top:5px;
-    padding-bottom:5px;
+    margin: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
     background-color: var(--header);
     font-size: 18px;
 }
 
-.drop-down div:hover{
+.drop-down div:hover {
     background-color: var(--header-secondary);
 }
 
-#plus-button{
+#plus-button {
     float: right;
     width: 28px;
     height: 28px;
@@ -101,12 +97,11 @@ p{
     transition: background-color 0.2s;
 }
 
-#plus-button:hover{
+#plus-button:hover {
     background-color: var(--header-secondary)
 }
 
-
-#clear-windows-btn{
+#clear-windows-btn {
     background-color: transparent;
     font-size: 22px;
     border: none;
@@ -116,26 +111,26 @@ p{
     height: 28px;
     text-align: center;
     transition: background-color 0.2s, color 0.2s;
-    padding:1px 2px 2px 2px;
-    box-sizing:border-box;
-    position:absolute;
+    padding: 1px 2px 2px 2px;
+    box-sizing: border-box;
+    position: absolute;
     right: 105px;
 }
 
-#clear-windows-btn:hover{
-    background-color: var(--header-secondary); 
-    color:rgb(200,20,0);
+#clear-windows-btn:hover {
+    background-color: var(--header-secondary);
+    color: rgb(200, 20, 0);
 }
 
-#clear-windows-btn:active{
-    background-color: rgba(255,50,0,0.5);
+#clear-windows-btn:active {
+    background-color: rgba(255, 50, 0, 0.5);
 }
 
-#darklight-button:hover{
+#darklight-button:hover {
     background-color: var(--header-secondary)
 }
 
-#darklight-button{
+#darklight-button {
     float: right;
     width: 28px;
     height: 28px;
@@ -144,11 +139,11 @@ p{
     transition: background-color 0.2s;
 }
 
-#darklight-button:hover{
+#darklight-button:hover {
     background-color: var(--header-secondary)
 }
 
-#header-title-container{
+#header-title-container {
     padding-left: 10px;
     margin: 6px;
     width: 150px;
@@ -156,24 +151,24 @@ p{
     overflow: hidden;
 }
 
-#header-title-container h2{
+#header-title-container h2 {
     margin: 2px;
     font-size: 22px;
     font-weight: lighter;
 }
 
-#main-container{
+#main-container {
     position: relative;
     box-sizing: border-box;
     margin-top: 60px;
-    width:100%;
+    width: 100%;
     height: 100%;
     padding: 10px;
 }
 
-.part-container{
+.part-container {
     position: absolute;
-    top:0px;
+    top: 0px;
     left: 5px;
     border-radius: 8px 8px 8px 8px;
     overflow: hidden;
@@ -198,34 +193,35 @@ p{
 }
 
 #lightmode-button:hover {
-    background-color: rgb(225,225,225);
+    background-color: rgb(225, 225, 225);
 }
 
 #automode-button {
-    background-color: rgb(120,125,130);
+    background-color: rgb(120, 125, 130);
     color: white;
 }
 
 #automode-button:hover {
-    background-color: rgb(105,110,120);
+    background-color: rgb(105, 110, 120);
 }
 
-#darkmode-button{
-    background-color: rgb(20,23,30);
+#darkmode-button {
+    background-color: rgb(20, 23, 30);
     color: white;
     transition: all 0.2s;
 }
 
-#darkmode-button:hover{
-    background-color: rgb(50,53,60);
+#darkmode-button:hover {
+    background-color: rgb(50, 53, 60);
 }
-.drag-bar{
+
+.drag-bar {
     width: 100%;
     height: 20px;
     cursor: grab;
 }
 
-.drag-bar:active{
+.drag-bar:active {
     cursor: grabbing;
 }
 
@@ -234,35 +230,35 @@ p{
     font-weight: lighter;
 }
 
-.part-container button{
+.part-container button {
     position: absolute;
-    top:5px;
+    top: 5px;
     right: 5px;
-    width:20px;
-    height:20px;
-    background-color: rgb(0,0,0,0);
-    color:rgb(255,255,255,0);
+    width: 20px;
+    height: 20px;
+    background-color: rgb(0, 0, 0, 0);
+    color: rgb(255, 255, 255, 0);
     border: none;
     border-radius: 20%;
     transition: all 0.2s;
 }
 
-.part-container:hover button{
-    background-color: rgb(0,0,0,0.05);
-    color:rgb(255,255,255,0.4);
+.part-container:hover button {
+    background-color: rgb(0, 0, 0, 0.05);
+    color: rgb(255, 255, 255, 0.4);
 }
 
-.part-container button:hover{
-    background-color: rgb(0,0,0,0.2);
-    color:white;
+.part-container button:hover {
+    background-color: rgb(0, 0, 0, 0.2);
+    color: white;
 }
 
-.part-container button:active{
-    background-color: rgb(0,0,0,0.6);
-    color:white;
+.part-container button:active {
+    background-color: rgb(0, 0, 0, 0.6);
+    color: white;
 }
 
-.calculator{
+.calculator {
     width: 600px;
     height: 400px;
     background-color: black;
@@ -272,24 +268,24 @@ p{
     color: white;
 }
 
-.snake{
+.snake {
     width: 615px;
     height: 640px;
     resize: none;
-    color:white;
+    color: white;
     background-color: #7B9C3D;
-    border: 5px solid rgb(120,150,80);
+    border: 5px solid rgb(120, 150, 80);
 }
 
-.dictionary{
+.dictionary {
     width: 400px;
     height: 600px;
-    background-color: rgb(80,120,180);
-    color:white;
-    border: 5px solid rgb(60,100,150);
+    background-color: rgb(80, 120, 180);
+    color: white;
+    border: 5px solid rgb(60, 100, 150);
 }
 
-.note{
+.note {
     width: 200px;
     height: 300px;
     background-color: #e6ca55;
@@ -297,7 +293,7 @@ p{
     border: 5px solid #d6ba35;
 }
 
-.timer{
+.timer {
     width: 255px;
     height: 250px;
     background-color: rgb(255, 133, 51);
@@ -306,40 +302,38 @@ p{
     /* resize: none; */
 }
 
-
-iframe{
+iframe {
     width: 100%;
     height: calc(100% - 20px);
     border: none;
 }
 
-.no-pointer{
+.no-pointer {
     pointer-events: none;
 }
 
-
 @media (prefers-color-scheme: dark) {
-    :root{
-        --primary: rgb(20,23,30);
-        --secondary: rgb(30,35,40);
-        --header: rgb(20,23,30,0.75);
-        --header-secondary: rgb(30,35,40,0.4);
-        --text: rgb(230,230,230);
-        --text-secondary: rgb(210,210,210);
-        --shadow: rgb(0,0,0,0.1);
-        --shadow-dark: rgb(0,0,0,0.5);
+    :root {
+        --primary: rgb(20, 23, 30);
+        --secondary: rgb(30, 35, 40);
+        --header: rgb(20, 23, 30, 0.75);
+        --header-secondary: rgb(30, 35, 40, 0.4);
+        --text: rgb(230, 230, 230);
+        --text-secondary: rgb(210, 210, 210);
+        --shadow: rgb(0, 0, 0, 0.1);
+        --shadow-dark: rgb(0, 0, 0, 0.5);
     }
 }
 
 @media (prefers-color-scheme: light) {
     :root {
         --primary: white;
-        --secondary: rgb(240,240,240);
-        --header: rgb(255,255,255,0.75);
-        --header-secondary: rgb(220,220,220,0.4);
+        --secondary: rgb(240, 240, 240);
+        --header: rgb(255, 255, 255, 0.75);
+        --header-secondary: rgb(220, 220, 220, 0.4);
         --text: black;
-        --text-secondary: rgb(30,30,30);
-        --shadow: rgb(0,0,0,0.03);
-        --shadow-dark: rgb(0,0,0,0.2);
+        --text-secondary: rgb(30, 30, 30);
+        --shadow: rgb(0, 0, 0, 0.03);
+        --shadow-dark: rgb(0, 0, 0, 0.2);
     }
 }
